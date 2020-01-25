@@ -1,8 +1,12 @@
+@font-face {
+  font-family: Oswald;
+  src: url("Oswald-Regular.ttf")
+}
+
 .text-input {
   position: relative;
   left: 0.8vw;
   width: 58vw;
-  height: 3vw;
   border: none;
   border-bottom: 1.5px solid rgba(67, 67, 67, 0.2);
   font-size: 1.7vw;
@@ -10,7 +14,7 @@
 }
 
 .text-input:focus {
-  border-bottom: 1.5px solid #03ff8e;
+  border-bottom: 1.5px solid #fffafa;
 }
 
 input:focus,
@@ -39,22 +43,35 @@ select:focus {
   left: 5vw;
   width: 8vw;
   height: 3vw;
-  font-size: 1.2vw;
+  font-size: 1.5vw;
+  font-family: Oswald;
   font-weight: bold;
   text-align: center;
-  background: #ffe203;
-  color: #fff;
-  border: 1px solid #eee;
-  border-radius: 20px;
-  box-shadow: 5px 5px 5px #eee;
-  text-shadow: none;
+  color: #c803ff;
+  border: .1vw solid #c803ff;
 }
 
 #submitButton:hover {
-  background: #03ff8e;
-  color: #fff;
-  border: 1px solid #eee;
-  border-radius: 20px;
-  box-shadow: 5px 5px 5px #eee;
-  text-shadow: none;
+  background: #c803ff;
+  color: rgb(22, 22, 22);
+  border: .1vw solid #c803ff;
+}
+
+textarea {
+  background-color: rgb(22, 22, 22);
+  height: 8vw;
+  color: #c803ff;
+  font-family: Oswald;
+}
+
+input {
+  background-color: rgb(22, 22, 22);
+  color: #c803ff;
+  font-family: Oswald;
+}
+
+#contactme {
+  position: relative;
+  left: 5vw;
+  top: 5vw;
 }

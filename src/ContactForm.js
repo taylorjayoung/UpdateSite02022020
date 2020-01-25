@@ -41,8 +41,17 @@ class ContactForm extends Component {
   render() {
     return (
       <Fragment>
-        <div>
-          <h1 style={{ position: "relative", left: "2vw", top: "2vw" }}>
+        <div id="contactme">
+          <h1
+            style={{
+              position: "relative",
+              left: "2vw",
+              top: "2vw",
+              fontFamily: "Oswald",
+              color: "#03ff8e",
+              fontSize: "4vw"
+            }}
+          >
             Contact Me
           </h1>
           <form
@@ -86,7 +95,7 @@ class ContactForm extends Component {
 
             <input
               type="submit"
-              value="Submit"
+              value="SEND"
               className="btn btn--submit"
               id="submitButton"
             />

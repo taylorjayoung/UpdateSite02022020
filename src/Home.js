@@ -1,11 +1,12 @@
 import React, { Component, Fragment } from "react";
-import Heart from "./heart.png";
-import AboutMe from './AboutMe.js'
+import AboutMe from "./AboutMe.js";
+import { Link } from "react-router-dom";
+import backgroundpic from "./america-american-flag-architecture-bridge-450597.jpg";
+import Resume from './Resume.docx'
 
 class Home extends Component {
   state = {
-    time: "",
-    secondTime: ""
+    time: ""
   };
 
   componentDidMount() {
@@ -13,30 +14,28 @@ class Home extends Component {
     this.setState({
       time: d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds()
     });
-
-    this.setState({
-      secondTime:
-        d.getHours() +
-        ":" +
-        d.getMinutes() +
-        ":" +
-        (d.getSeconds() +6)
-    });
   }
   render() {
     return (
       <Fragment>
-        <h1 id="myTitle">[{this.state.time}]FULLSTACKDEVELOPER</h1>
-        <h1 id="line2">
-          {" "}
-          <img src={Heart} alt="heart" id="heartPic" /> cd AboutMe
-        </h1>
-        <h1 id="myTitle">[{this.state.secondTime}]AboutMe</h1>
-        <h1 id="line2">
-          {" "}
-          <img src={Heart} alt="heart" id="heartPic" /> code .
-        </h1>
-        <AboutMe />
+        <div id="homeDiv">
+          <h1 id="myTitle" style={{ fontSize: "15vw" }}>
+            BOBBY BUFFALOBOY{" "}
+          </h1>
+          <h2 id="homeSubtitle" style={{fontSize: "2vw", color: "#fffafa"}}>FULLSTACK DEVELOPER</h2>
+        </div>
+        <img src={backgroundpic} id="backgroundpic" />
+        <Link
+          to={`/contact`}
+          activeClassName="active"
+          style={{ textDecoration: "none" }}
+        >
+          <div id="contactButton">CONTACT ME</div>
+        </Link>
+        <br></br>
+        <a href={Resume} style={{textDecoration: "none"}} download>
+          <div id="resumeDL">DOWNLOAD RESUME (docx)</div>
+        </a>
       </Fragment>
     );
   }

@@ -1,0 +1,41 @@
+@font-face {
+    font-family: Oswald;
+    src: url("Oswald-Regular.ttf")
+  }
+
+.skillsFlexContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: auto;
+    width: 100%;
+    position: relative;
+    top: 10vw;
+}
+
+.skillsPageTitle {
+    margin: 0;
+}
+
+.skillsAbout {
+    width: 30%;
+    border-right: .1vw solid #c803ff;
+    padding-right: 8vw;
+}
+
+.skills {
+    width: 30%;
+}
+
+li {
+    color: #fffafa;
+    list-style-type: none;
+    margin-bottom: .5vw;
+    display: inline-block;
+    padding: 4%;
+    font-family: Oswald;
+    font-size: 2vw;
+    border: .1vw solid #fffafa;
+    text-align: center;
+    margin: .2vw;
+}

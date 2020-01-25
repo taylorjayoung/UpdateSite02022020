@@ -1,10 +1,21 @@
+@font-face {
+  font-family: Gobold;
+  src: url("Gobold-High-Bold.otf");
+  
+}
+@font-face {
+  font-family: Oswald;
+  src: url("Oswald-Regular.ttf")
+}
+
 .App {
   text-align: center;
 }
 
 body {
-  background-color: #fffafa;
-  overflow-x: hidden;
+  background-color: rgb(22, 22, 22);
+  overflow: hidden;
+  height: 80vw;
 }
 
 #name {
@@ -14,27 +25,23 @@ body {
   right: 36vw;
   top: -2vw;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  letter-spacing: -.08em;
+  letter-spacing: -0.08em;
   word-spacing: 1.5vw;
-  /* text-shadow: -1px -1px 1px #fffafa, 1px 1px 1px #0e1111; */
-  text-shadow: .2vw .2vw 0vw #0e1111, .35vw .35vw 0vw #ffe203;
 }
 
-#name:hover {
-  text-shadow: .2vw .2vw 0vw #0e1111, .35vw .35vw 0vw #03ff8e;
-  /* color: #03ff8e; */
+#mainNavIcons {
+  margin-left: 0.6vw;
 }
 
-.navLinks {
-  text-decoration: none;
-  color: #fffafa;
-  font-size: 2.5vw;
+svg {
   position: relative;
-  right: 5vw;
-  top: 8vw;
-  margin-right: 2vw;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  height: 3vw;
+  padding-bottom: 1.5vw;
+  top: 14vw;
+  fill: #6a6a6aa5;
+}
+
+.navlinks:hover {
+  fill: #03ff8e;
 }
 
 #navSocialLinks {
@@ -45,49 +52,30 @@ body {
 .navSocialLinks {
   position: absolute;
   left: 85vw;
-  top: 3vw;
+  bottom: vw;
   width: 10vw;
-  
 }
 
 #navBar {
-  position: sticky;
+  height: 100%;
+  width: 4vw;
+  position: fixed;
+  z-index: 1;
   top: 0;
-  background-color: #0e1111;
-  height: 12vw;
+  left: 0;
+  background-color: rgb(19, 19, 19);
+  overflow: hidden;
+  padding-top: 20px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  border-bottom: 0.5vw solid #ffe203;
-  z-index: 9999;
-  -webkit-box-shadow: 0px 12px 15px 0px rgba(0, 0, 0, 0.63);
-  box-shadow: 0px 12px 15px 0px rgba(0, 0, 0, 0.461);
+  flex-direction: column;
+  height: 100%;
 }
 
-#profilePhoto {
-  width: 30vw;
-  position: absolute;
-  left: 61.3vw;
-  top: 1.95vw;
-  
-}
-
-#profileBorder {
-  border: 0.4vw solid #fffafa;
-  border-radius: 50%;
-  width: 19vw;
-  height: 19vw;
-  position: absolute;
-  left: 66vw;
-  top: 2.4vw;
-  z-index: 9999;
-  -webkit-box-shadow: 0px 12px 15px 0px rgba(0, 0, 0, 0.63);
-  box-shadow: 0px 12px 15px 0px rgba(0, 0, 0, 0.461);
-  
-}
-
-#profileBorder:hover {
-  border: 0.4vw solid #03ff8e;
+#homeDiv {
+  width: 75vw;
+  height: 20vw;
+  margin: auto;
+  /* background-color: #03ff8e; */
 }
 
 #myTitle {
@@ -95,34 +83,96 @@ body {
   position: relative;
   left: 2vw;
   top: 1vw;
-  
 }
 
-#heartPic {
-  width: 2vw;
-}
-#line2 {
-  font-size: 2vw;
+
+#homeSubtitle {
+  color: #fffafa;
+  font-family: Oswald;
   position: relative;
-  left: 2vw;
+  left: 47vw;
+  bottom: 10vw;
+  z-index: 1;
+}
+
+#myTitle {
+  color: #03ff8e;
+  font-family: Gobold;
+  text-align: center;
+  text-shadow: .2vw .2vw .1vw #c803ffd7;
+  z-index: 1;
 }
 
 #contactForm {
-  display:inline;
-
+  display: inline;
 }
 
-h2 {
-  margin-right: 2vw;
-  color: #ffe203;
-}
-
-#skillsContainer {
-  display: flex;
-  flex-wrap: wrap;
-  width: 75vw;
+#backgroundpic {
   position: relative;
-  bottom: 4vw;
-  left: 5vw;
+  bottom: 48vw;
+  width: 100vw;
+  opacity: 0.04;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+#contactButton {
+  position: relative;
+  left: 63vw;
+  bottom: 67.5vw;
+  z-index: 1;
+  color: #c803ff;
+  border: .1vw solid #fffafa;
+  width: 10vw;
+  height: auto;
+  text-align: center;
+  font-size: 1.5vw;
+  font-family: Oswald;
+  border-color: #c803ff;
+}
+
+#contactButton:hover {
+  border-color: #c803ff;
+  background-color: #c803ff;
+  color: rgb(22, 22, 22);
+}
+
+#resumeDL {
+  position: relative;
+  left: 63vw;
+  bottom: 67.5vw;
+  z-index: 1;
+  color: #c803ff;
+  border: .1vw solid #fffafa;
+  width: 10vw;
+  height: auto;
+  text-align: center;
+  font-size: 1.5vw;
+  font-family: Oswald;
+  border-color: #c803ff;
+}
+
+#resumeDL:hover {
+  border-color: #c803ff;
+  background-color: #c803ff;
+  color: rgb(22, 22, 22);
+}
+
+#socialIcons {
+  position: relative;
+  top: 20vw;
+  left: .3vw;
+}
+
+#initialsNav {
+  font-family: GoBold;
+  font-size: 4vw;
+  background-color: rgba(12, 12, 12, 0.639);
+  color: #03ff8e;
+  text-align: center;
+  text-shadow: .2vw .2vw .1vw #c803ffd7;
+  position: absolute;
+  top: -2.5vw;
+  left: .6vw;
 }
 

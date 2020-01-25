@@ -1,59 +1,202 @@
-#projectsContainer {
-  position: relative;
-  top: 5vw;
+@font-face {
+  font-family: Lobster;
+  src: url("Lobster-Regular.ttf");
+  
 }
 
-#projectCard {
-  padding-bottom: 2vw;
-  border-top: 0.2vw solid rgba(99, 99, 99, 0.214);
-  display: grid;
-  grid-template-columns: fit-content(100%) fit-content(100%) 1fr;
+.workContent {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
-#logos {
-  position: relative;
-  left: 7vw;
-  top: 2vw;
-  width: 8vw;
-  border-radius: 5%;
+.projectsContainer {
+  height: 52vw;
+  margin-top: 1vw;
+  margin-left: -10vw;
+  margin-right: 3vw;
+  overflow-y: scroll;
+}
+
+.projectsContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.projectsContainer {
+  -ms-overflow-style: none;
 }
 
 .gifss {
-    position: relative;
-    left: 5vw;
-    top: 5vw;
-    padding-bottom: 10vw;
+  margin-top: 0.5vw;
+  z-index: 0;
 }
 
 #gif {
-    width: 40vw;
+  width: 30vw;
+  z-index: 0;
 }
 
-.projectTitles {
+#gif:hover {
+  border-bottom: 0.15vw solid #03ff8e;
+}
+
+.logos {
+  width: 15vw;
+  padding: 1.9vw;
+  padding-left: 7vw;
+  padding-right: 8vw;
+  background-color: black;
+  z-index: 1;
   position: relative;
-  left: 17vw;
-  bottom: 6vw;
-  font-size: 3vw;
-  text-decoration: underline;
+  left: 30vw;
+  opacity: 0.95;
+  transition: opacity 0.35s ease-in-out;
+  -moz-transition: opacity 0.35s ease-in-out;
+  -webkit-transition: opacity 0.35s ease-in-out;
 }
 
-.projectContent {
-  font-size: 2vw;
+.logos:hover {
+  opacity: 0;
+}
+
+.FLLogo {
+  width: 16vw;
+  background-color: #fffafa;
+  margin-right: 2vw;
+  padding-right: 0.8vw;
+}
+
+.mainContentLogos {
+  width: 14vw;
+  margin-right: 2vw;
+  padding-right: 0.8vw;
+}
+
+.flContainer {
+  display: flex;
+}
+
+.mainContent {
+  width: 40vw;
+  height: 53vw;
+  position: relative;
+  left: 8vw;
+  padding-right: 5vw;
+  overflow-y: scroll;
+}
+
+.mainContent::-webkit-scrollbar {
+  display: none;
+}
+
+.mainContent {
+  -ms-overflow-style: none;
+}
+
+h4 {
+  color: #fffafa;
   font-size: 1.5vw;
-  font-stretch: expanded;
+  font-family: Oswald;
 }
 
-h2 {
-  font-size: 2vw;
+.workPageTitle {
+  color: #03ff8e;
+  font-family: Oswald;
+  font-size: 6vw;
+  display: inline-block;
 }
 
-h3 {
-  font-size: 3vw;
+.workPagePs {
+    color: #fffafa;
+    font-family: Oswald;
+    font-size: 1.5vw;
 }
 
-.pContainer {
-  width: 50vw;
+#Melius2 {
+  width: 15vw;
+  /* height: 12vw; */
+  padding: 1vw;
+  padding-left: 7.2vw;
+  padding-right: 8vw;
+  background-color: black;
+  z-index: 1;
   position: relative;
-  bottom: 5vw;
-  left: 4vw;
+  left: 30vw;
+  opacity: 0.95;
+  transition: opacity 0.35s ease-in-out;
+  -moz-transition: opacity 0.35s ease-in-out;
+  -webkit-transition: opacity 0.35s ease-in-out;
+}
+
+#Melius2:hover {
+  opacity: 0;
+}
+
+#Melius1 {
+  width: 15vw;
+  /* height: 12vw; */
+  padding: 3.5vw;
+  padding-left: 7vw;
+   padding-right: 8vw;
+  background-color: black;
+  z-index: 1;
+  position: relative;
+  left: 30vw;
+  opacity: 0.95;
+  transition: opacity 0.35s ease-in-out;
+  -moz-transition: opacity 0.35s ease-in-out;
+  -webkit-transition: opacity 0.35s ease-in-out;
+}
+
+#Melius1:hover {
+  opacity: 0;
+}
+
+#MySite {
+  width: 15vw;
+  /* height: 12vw; */
+  padding: 3.5vw;
+  padding-left: 7vw;
+   padding-right: 8vw;
+  background-color: black;
+  z-index: 1;
+  position: relative;
+  left: 30vw;
+  opacity: 0.95;
+  transition: opacity 0.35s ease-in-out;
+  -moz-transition: opacity 0.35s ease-in-out;
+  -webkit-transition: opacity 0.35s ease-in-out;
+}
+
+#MySite:hover {
+  opacity: 0;
+}
+
+.workLinks {
+  color: #c803ff;
+  border: .1vw solid #fffafa;
+  padding: .2vw;
+  width: 10vw;
+  height: auto;
+  text-align: center;
+  font-size: 1.5vw;
+  font-family: Oswald;
+  border-color: #c803ff;
+  text-decoration: none;
+}
+
+.workLinks:hover {
+  border-color: #c803ff;
+  background-color: #c803ff;
+  color: rgb(22, 22, 22);
+}
+
+#workPageLine {
+  background-color: #c803ff;
+  margin: auto;
+  position: relative;
+  left: 9vw;
+  width: .08vw;
+  height: 40vw;
 }
