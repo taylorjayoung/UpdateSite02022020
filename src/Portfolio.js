@@ -28,7 +28,7 @@ class Portfolio extends Component {
         <img src=${MySiteLogo} class="mainContentLogos" />
       </div>
       <div>
-      <a href="https://github.com/SlickJacket/MyMeliusFrontEnd" class="workLinks">Github</a>
+      <a href="https://github.com/SlickJacket/MyNewSite01252020" class="workLinks">Github</a>
       <br></br>
       <a href="https://youtu.be/RwweLZNLDOk" class="workLinks">Video Demo</a>
       </div>
