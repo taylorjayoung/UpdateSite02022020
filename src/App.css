@@ -163,6 +163,7 @@
       display: contents;
       color: #fffafa;
       font-family: Oswald;
+      cursor: pointer;
     }
 
     #mobile-flex-nav {
