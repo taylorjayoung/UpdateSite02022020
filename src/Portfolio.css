@@ -1,22 +1,21 @@
 @font-face {
   font-family: Lobster;
   src: url("Lobster-Regular.ttf");
-  
 }
 
 .workContent {
   display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  flex-basis: 100%;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .projectsContainer {
-  height: 52vw;
-  margin-top: 1vw;
-  margin-left: -10vw;
-  margin-right: 3vw;
+  max-width: 40%;
+  max-height: 80vh;
   overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
 }
 
 .projectsContainer::-webkit-scrollbar {
@@ -42,14 +41,13 @@
 }
 
 .logos {
+  margin-bottom: -47%;
   width: 15vw;
-  padding: 1.9vw;
+  padding: 2.5vw;
   padding-left: 7vw;
   padding-right: 8vw;
   background-color: black;
   z-index: 1;
-  position: relative;
-  left: 30vw;
   opacity: 0.95;
   transition: opacity 0.35s ease-in-out;
   -moz-transition: opacity 0.35s ease-in-out;
@@ -61,28 +59,35 @@
 }
 
 .FLLogo {
-  width: 16vw;
+  width: 80%;
   background-color: #fffafa;
   margin-right: 2vw;
   padding-right: 0.8vw;
 }
 
 .mainContentLogos {
-  width: 14vw;
+  max-width: 60%;
   margin-right: 2vw;
   padding-right: 0.8vw;
 }
 
 .flContainer {
   display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.flContainer > * {
+  flex-basis: 50%;
 }
 
 .mainContent {
-  width: 40vw;
+  max-width: 50%;
   height: 53vw;
-  position: relative;
-  left: 8vw;
-  padding-right: 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   overflow-y: scroll;
 }
 
@@ -103,26 +108,29 @@ h4 {
 .workPageTitle {
   color: #03ff8e;
   font-family: Oswald;
-  font-size: 6vw;
+  font-size: 60px;
   display: inline-block;
+  padding: 4%;
+  text-align: center;
+  border-top: 1px solid #c803ff;
+  border-bottom: 1px solid #c803ff;
 }
 
 .workPagePs {
-    color: #fffafa;
-    font-family: Oswald;
-    font-size: 1.5vw;
+  color: #fffafa;
+  font-family: Oswald;
+  font-size: 25px;
 }
 
 #Melius2 {
-  width: 15vw;
+  margin-bottom: -42%;
+  width: 14.8vw;
   /* height: 12vw; */
-  padding: 1vw;
+  padding: 2vw;
   padding-left: 7.2vw;
   padding-right: 8vw;
   background-color: black;
   z-index: 1;
-  position: relative;
-  left: 30vw;
   opacity: 0.95;
   transition: opacity 0.35s ease-in-out;
   -moz-transition: opacity 0.35s ease-in-out;
@@ -134,15 +142,14 @@ h4 {
 }
 
 #Melius1 {
+  margin-bottom: -43%;
   width: 15vw;
   /* height: 12vw; */
-  padding: 3.5vw;
+  padding: 5vw;
   padding-left: 7vw;
-   padding-right: 8vw;
+  padding-right: 8vw;
   background-color: black;
   z-index: 1;
-  position: relative;
-  left: 30vw;
   opacity: 0.95;
   transition: opacity 0.35s ease-in-out;
   -moz-transition: opacity 0.35s ease-in-out;
@@ -155,14 +162,12 @@ h4 {
 
 #MySite {
   width: 15vw;
-  /* height: 12vw; */
+  margin-bottom: -45%;
   padding: 3.5vw;
   padding-left: 7vw;
-   padding-right: 8vw;
+  padding-right: 8vw;
   background-color: black;
-  z-index: 1;
-  position: relative;
-  left: 30vw;
+  z-index: 99999;
   opacity: 0.95;
   transition: opacity 0.35s ease-in-out;
   -moz-transition: opacity 0.35s ease-in-out;
@@ -175,12 +180,11 @@ h4 {
 
 .workLinks {
   color: #c803ff;
-  border: .1vw solid #fffafa;
-  padding: .2vw;
-  width: 10vw;
-  height: auto;
+  border: 0.1vw solid #fffafa;
+  padding: 0.2vw;
+
   text-align: center;
-  font-size: 1.5vw;
+  font-size: 25px;
   font-family: Oswald;
   border-color: #c803ff;
   text-decoration: none;
@@ -192,11 +196,50 @@ h4 {
   color: rgb(22, 22, 22);
 }
 
-#workPageLine {
-  background-color: #c803ff;
-  margin: auto;
-  position: relative;
-  left: 9vw;
-  width: .08vw;
-  height: 40vw;
+@media all and (max-width: 950px) {
+  .workContent {
+    flex-direction: column;
+  }
+  .mainContent {
+    order: 2;
+    overflow-y: visible;
+    max-width: 90%;
+  }
+
+  .projectsContainer {
+    flex-direction: row;
+    order: 1;
+    max-width: 80%;
+    max-height: 40%;
+    overflow-y: scroll;
+  }
+
+  .workLinks {
+    font-size: 85%;
+  }
+
+  .logos {
+    margin-bottom: -60%;
+    width: 48%;
+    padding-right: 50%;
+  }
+
+  #MySite {
+    margin-bottom: -60%;
+    
+  }
+
+  #Melius2 {
+    margin-bottom: -60%;
+    width: 44%;
+    padding: -10%;
+  }
+
+  #Melius1 {
+    margin-bottom: -60%;
+    margin-left: -5%;
+    width: 44%;
+    padding-left: 22%;
+    padding-right: 40%;
+  }
 }
