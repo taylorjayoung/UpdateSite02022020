@@ -1,178 +1,204 @@
 @font-face {
   font-family: Gobold;
   src: url("Gobold-High-Bold.otf");
-  
 }
 @font-face {
   font-family: Oswald;
-  src: url("Oswald-Regular.ttf")
+  src: url("Oswald-Regular.ttf");
 }
 
-.App {
-  text-align: center;
-}
+  body {
+    background-color: rgb(22, 22, 22);
+  }
 
-body {
-  background-color: rgb(22, 22, 22);
-  overflow: hidden;
-  height: 80vw;
-}
+  #initialsNav {
+    font-family: GoBold;
+    font-size: 60px;
+    background-color: rgba(12, 12, 12, 0.639);
+    color: #03ff8e;
+    text-shadow: 0.2vw 0.2vw 0.1vw #c803ffd7;
+    margin: 0;
+  }
 
-#name {
-  color: #fffafa;
-  font-size: 5vw;
-  position: absolute;
-  right: 36vw;
-  top: -2vw;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  letter-spacing: -0.08em;
-  word-spacing: 1.5vw;
-}
+  #mainNavIcons {
+    display: flex;
+    flex-direction: column;
+  }
 
-#mainNavIcons {
-  margin-left: 0.6vw;
-}
+  #mainNavIcons > * {
+    /* flex: 1, 1, 50%; */
+    fill: #6a6a6aa5;
+  }
 
-svg {
-  position: relative;
-  padding-bottom: 1.5vw;
-  top: 14vw;
-  fill: #6a6a6aa5;
-}
+  /* svg {
+    fill: #6a6a6aa5;
+  } */
 
-.navlinks:hover {
-  fill: #03ff8e;
-}
+  .navlinks:hover {
+    fill: #03ff8e;
+  }
 
-#navSocialLinks {
-  width: 3vw;
-  z-index: 9999;
-}
+  #navSocialLinks {
+    width: 40px;
+  }
 
-.navSocialLinks {
-  position: absolute;
-  left: 85vw;
-  bottom: vw;
-  width: 10vw;
-}
+  #navBar {
+    flex-basis: 4%;
+    background-color: rgb(19, 19, 19);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-#navBar {
-  height: 100%;
-  width: 4vw;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: rgb(19, 19, 19);
-  overflow: hidden;
-  padding-top: 20px;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
+  #navBar > * {
+    flex:1, 1, 33.33%;
+  }
 
-#homeDiv {
-  width: 75vw;
-  height: 20vw;
-  margin: auto;
-  /* background-color: #03ff8e; */
-}
+ .homeWrapper {
+   min-height: 100vh;
+   display: flex;
+ }
 
-#myTitle {
-  font-size: 2vw;
-  position: relative;
-  left: 2vw;
-  top: 1vw;
-}
+ .homeDiv {
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+   justify-content: center;
+   align-items: center;
+   flex-basis: 100%;
+ }
 
+  #myTitle {
+    font-size: 200px;
+    color: #03ff8e;
+    font-family: Gobold;
+    text-shadow: 0.2vw 0.2vw 0.1vw #c803ffd7;
+    margin: 0;
+  }
 
-#homeSubtitle {
-  color: #fffafa;
-  font-family: Oswald;
-  position: relative;
-  left: 47vw;
-  bottom: 10vw;
-  z-index: 1;
-}
+  #homeSubtitle {
+    color: #fffafa;
+    font-family: Oswald;
+    font-size: 35px;
+  }
 
-#myTitle {
-  color: #03ff8e;
-  font-family: Gobold;
-  text-align: center;
-  text-shadow: .2vw .2vw .1vw #c803ffd7;
-  z-index: 1;
-}
+  #contactForm {
+    display: inline;
+  }
 
-#contactForm {
-  display: inline;
-}
+  #backgroundpic {
+    position: relative;
+    bottom: 52vw;
+    width: 100vw;
+    opacity: 0.04;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
 
-#backgroundpic {
-  position: relative;
-  bottom: 48vw;
-  width: 100vw;
-  opacity: 0.04;
-  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
-}
+  #contactButton {
+    color: #c803ff;
+    border: 0.1vw solid #fffafa;
+    text-align: center;
+    font-size: 22px;
+    font-family: Oswald;
+    border-color: #c803ff;
+  }
 
-#contactButton {
-  position: relative;
-  left: 63vw;
-  bottom: 67.5vw;
-  z-index: 1;
-  color: #c803ff;
-  border: .1vw solid #fffafa;
-  width: 10vw;
-  height: auto;
-  text-align: center;
-  font-size: 1.5vw;
-  font-family: Oswald;
-  border-color: #c803ff;
-}
+  #contactButton:hover {
+    border-color: #c803ff;
+    background-color: #c803ff;
+    color: rgb(22, 22, 22);
+  }
 
-#contactButton:hover {
-  border-color: #c803ff;
-  background-color: #c803ff;
-  color: rgb(22, 22, 22);
-}
+  #resumeDL {
+    color: #c803ff;
+    border: 0.1vw solid #fffafa;
+    text-align: center;
+    font-size: 22px;
+    font-family: Oswald;
+    border-color: #c803ff;
+  }
 
-#resumeDL {
-  position: relative;
-  left: 63vw;
-  bottom: 67.5vw;
-  z-index: 1;
-  color: #c803ff;
-  border: .1vw solid #fffafa;
-  width: 10vw;
-  height: auto;
-  text-align: center;
-  font-size: 1.5vw;
-  font-family: Oswald;
-  border-color: #c803ff;
-}
+  #resumeDL:hover {
+    border-color: #c803ff;
+    background-color: #c803ff;
+    color: rgb(22, 22, 22);
+  }
 
-#resumeDL:hover {
-  border-color: #c803ff;
-  background-color: #c803ff;
-  color: rgb(22, 22, 22);
-}
+  #mobile-flex-nav {
+    display: none;
+  }
 
-#socialIcons {
-  position: relative;
-  top: 20vw;
-  left: .3vw;
-}
+  .hamburger {
+    display: none;
+  }
 
-#initialsNav {
-  font-family: GoBold;
-  font-size: 4vw;
-  background-color: rgba(12, 12, 12, 0.639);
-  color: #03ff8e;
-  text-align: center;
-  text-shadow: .2vw .2vw .1vw #c803ffd7;
-  position: absolute;
-  top: -2.5vw;
-  left: .6vw;
-}
+  @media all and (max-width: 950px) {
+    .homeWrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    #navBar {
+      flex-direction: row;
+      min-height: 2vh;
+      justify-content: space-around;
+    }
+   
+    #navBar #mainNavIcons, #socialIcons {
+      display: none;
+    }
 
+    .hamburger {
+      display: contents;
+      color: #fffafa;
+      font-family: Oswald;
+    }
+
+    #mobile-flex-nav {
+      justify-content: center;
+    }
+
+    #mobile-flex-nav > * {
+      text-align: center;
+    }
+
+    #mainNavIcons {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: space-between;
+    }
+
+    #mainNavIcons > * {
+      flex-basis: 100%;
+    }
+
+    #myTitle {
+      font-size: 100px;
+      text-align: center;
+    }
+
+    .navlinks {
+      text-decoration: none;
+    }
+
+    .navlinks p {
+      font-family: Oswald;
+      color: #c803ff;
+      border: 1px solid #c803ff;
+    }
+
+    .mobileSocialIcons {
+      display: flex;
+      justify-content: space-evenly;
+      align-content: center;
+    }
+
+    .mobileSocialIcons svg {
+      fill: #fffafa;
+    }
+
+  }

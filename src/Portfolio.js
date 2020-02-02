@@ -3,16 +3,14 @@ import GTLogo from "./goldteethusalogo.png";
 import Melius2 from "./Melius_Logo2.png";
 import Melius1 from "./Melius1.png";
 import FLLogo from "./FLLogo.png";
-import MySiteLogo from "./MySiteLogo.png"
+import MySiteLogo from "./MySiteLogo.png";
 import Melius1Gif from "./Melius1gf.gif";
 import Melius2Gif from "./melius2gf.gif";
 import GTGif from "./gtusagf.gif";
-import MySiteGif from "./MyNewSiteGF.gif"
+import MySiteGif from "./MyNewSiteGF.gif";
 import "./Portfolio.css";
 
 class Portfolio extends Component {
-  state = {};
-
   handleClick = e => {
     e.preventDefault();
     let mainContent = document.getElementsByClassName("mainContent");
@@ -130,7 +128,9 @@ class Portfolio extends Component {
   render() {
     return (
       <Fragment>
-        <div className="workContent">
+        <div
+          className="workContent"
+        >
           <div className="mainContent">
             <h1 className="workPageTitle">Experience</h1>
             <div className="flContainer">
@@ -154,7 +154,7 @@ class Portfolio extends Component {
           </div>
           <div id="workPageLine"></div>
           <div className="projectsContainer">
-          <div className="gifss">
+            <div className="gifss">
               <img src={MySiteLogo} id="MySite" onClick={this.handleClick} />
               <img src={MySiteGif} id="gif" />
             </div>
