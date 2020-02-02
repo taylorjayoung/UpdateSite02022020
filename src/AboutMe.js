@@ -215,8 +215,10 @@ class AboutMe extends Component {
           <div id="aboutMeDiv">
             <img src={profilePhoto} alt="Bobby BuffaloBoy" id="profilePhoto" />
             <div id="aboutMeContent">
+              <div className="quoteContent">
               <h2 id="quote">“I am, above all, what excites me.”</h2>
               <h1 id="nameOfQuote">-Sylvan Tompkins</h1>
+              </div>
               <p id="aboutMyContent">
                 What makes this quote so powerful, is the force of connection I
                 have to it. If I find something interesting, I will immediately
@@ -226,7 +228,6 @@ class AboutMe extends Component {
                 learning the entire adobe suite, to becoming a Fullstack
                 developer.
               </p>
-              <br></br>
               <p id="aboutMyContent">
                 Yes, you can focus all your life on one thing, but I believe
                 it's the accumulation of several fields of study that grants one

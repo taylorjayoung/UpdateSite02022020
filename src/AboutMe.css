@@ -14,15 +14,13 @@
 }
 
 #aboutMeDiv > * {
-    flex-basis: 100%;
+    flex-basis: 50%;
 }
 
 #aboutMeContent {
     font-family: Oswald;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-around; */
-    /* align-content: center; */
     align-items: center;
 }
 
@@ -30,6 +28,12 @@
     color: #03ff8e;
     font-style: italic;
     font-size: 30px;
+}
+
+.quoteContent {
+    max-width: 90%;
+    border-bottom: .1em solid #c803ff ;
+    border-top: .1em solid #c803ff ;
 }
 
 #nameOfQuote {
@@ -47,15 +51,13 @@
 }
 
 #profilePhoto {
-    width: 25%;
-    height: 25%;
+    max-width: 20em;
+    max-height: 20em;
+    margin-top: 2%;
   }
 
   @media all and (max-width: 600px) {
-      #profilePhoto {
-          width: 40%;
-          height: 40%;
-      }
+      
   }
 
 

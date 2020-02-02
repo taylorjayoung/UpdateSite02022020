@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from "react";
 import { Link } from "react-router-dom";
-import backgroundpic from "./america-american-flag-architecture-bridge-450597.jpg";
 import Resume from "./Resume.docx";
 import github from "./Github.png";
 import ig from "./instagram.png";
