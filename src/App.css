@@ -172,8 +172,28 @@
       align-content: space-between;
     }
 
-    #mainNavIcons > * {
+    /* #mainNavIcons > * {
+      flex-basis: 50%;
+    } */
+
+    .homeLink {
       flex-basis: 100%;
+    }
+
+    .aboutLink {
+      flex-basis: 50%;
+    }
+
+    .skillsLink {
+      flex-basis: 50%;
+    }
+
+    .portLink {
+      flex-basis: 50%;
+    }
+
+    .contactLink {
+      flex-basis: 50%;
     }
 
     #myTitle {
@@ -195,10 +215,12 @@
       display: flex;
       justify-content: space-evenly;
       align-content: center;
+      flex-basis: 100%;
     }
 
     .mobileSocialIcons svg {
       fill: #fffafa;
     }
+    
 
   }

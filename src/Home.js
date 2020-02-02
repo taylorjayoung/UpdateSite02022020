@@ -144,19 +144,19 @@ class Home extends Component {
           </div>
           <div id="mobile-flex-nav">
             <div id="mainNavIcons">
-              <Link to="/" className="navlinks">
+              <Link to="/" className="navlinks homeLink">
                 <p>HOME</p>
               </Link>
-              <Link to="about" className="navlinks">
+              <Link to="about" className="navlinks aboutLink">
                 <p>ABOUT</p>
               </Link>
-              <Link to="skills" className="navlinks">
+              <Link to="skills" className="navlinks skillsLink">
                 <p>SKILLS</p>
               </Link>
-              <Link to="portfolio" className="navlinks">
+              <Link to="portfolio" className="navlinks portLink">
                 <p>PORTFOLIO</p>
               </Link>
-              <Link to="contact" className="navlinks">
+              <Link to="contact" className="navlinks contactLink">
                 <p>CONTACT</p>
               </Link>
             
