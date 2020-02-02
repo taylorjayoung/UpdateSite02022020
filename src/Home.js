@@ -5,7 +5,6 @@ import Resume from "./Resume.docx";
 import github from "./Github.png";
 import ig from "./instagram.png";
 import linkedin from "./linkedin.png";
-import { $CombinedState } from "redux";
 
 class Home extends Component {
   state = {};

@@ -4,67 +4,58 @@
   }
 
 #aboutMeDiv {
-    margin: auto;
-    border-radius: 2%;
-    width: 60vw;
-    height: 40vw;
-   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+    flex-basis: 100%;
+    min-height: 100vh;
+}
+
+#aboutMeDiv > * {
+    flex-basis: 100%;
 }
 
 #aboutMeContent {
-    position: relative;
-    bottom: 5vw;
-    border-radius: 1%;
-    width: 60vw;
-    height: 55vw;
     font-family: Oswald;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    /* align-content: center; */
+    align-items: center;
 }
 
 #quote {
     color: #03ff8e;
     font-style: italic;
-    position: relative;
-    left: 17.7vw;
-    top: 23vw;
-    font-size: 2vw;
+    font-size: 30px;
 }
 
 #nameOfQuote {
     color: #fffafa5b;
     font-style: italic;
-    font-size: 1vw;
-    text-align: right;
-    position: relative;
-    left: 7vw;
-    top: 21.5vw;
-    border-bottom: .1vw solid #c803ff;
-    width: 40vw;
-    padding-right: 5vw;
-    padding-bottom: .9vw;
+    font-size: 20px;
 }
 
 #aboutMyContent {
     color: #fffafa;
-    font-size: 1.5vw;
-    text-align: left;
-    width: 40vw;
-    margin: auto;
-    position: relative;
-    top: 22vw;
+    font-size: 22px;
+    display: flex;
+    max-width: 70vw;
     
 }
 
 #profilePhoto {
-    width: 19vw;
-    position: absolute;
-    left: 38vw;
-    top: .8vw;
+    width: 25%;
+    height: 25%;
   }
 
-  #componentTitle {
-      color: #c803ff85;
-      font-family: Oswald;
-      font-size: 4vw;
-      position: relative;
-      left: 60vw;
+  @media all and (max-width: 600px) {
+      #profilePhoto {
+          width: 40%;
+          height: 40%;
+      }
   }
+
+
