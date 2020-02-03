@@ -87,6 +87,7 @@
   height: 53vw;
   display: flex;
   flex-direction: column;
+  /* justify-content: space-around; */
   align-items: center;
   overflow-y: scroll;
 }
@@ -221,7 +222,7 @@ h4 {
   .logos {
     margin-bottom: -60%;
     width: 48%;
-    padding-right: 50%;
+    padding-right: 30%;
   }
 
   #MySite {
