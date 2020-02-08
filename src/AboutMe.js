@@ -7,7 +7,7 @@ class AboutMe extends Component {
     return (
       <div id="aboutMeDiv">
         <div id="aboutMeContent">
-          <h1 id="quote">“I am, above all, what excites me.”</h1>
+          <h2 id="quote">“I am, above all, what excites me.”</h2>
           <h1 id="nameOfQuote">-Sylvan Tompkins</h1>
           <p id="aboutMyContent">
             What makes this quote so powerful, is the force of connection I have

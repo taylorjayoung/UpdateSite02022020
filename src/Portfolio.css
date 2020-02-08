@@ -1,41 +1,59 @@
 #projectsContainer {
-    position: relative;
-    top: 5vw;
+  position: relative;
+  top: 5vw;
 }
 
 #projectCard {
-    padding-bottom: 2vw;
-    border-top: .2vw solid rgba(99, 99, 99, 0.214);
-    height: 30vw;
-    line-height: 32px;
+  padding-bottom: 2vw;
+  border-top: 0.2vw solid rgba(99, 99, 99, 0.214);
+  display: grid;
+  grid-template-columns: fit-content(100%) fit-content(100%) 1fr;
 }
 
 #logos {
-    position: relative;
-    left: 7vw;
-    /* top: 1vw; */
-    width: 8vw;
-    border-radius: 5%;
+  position: relative;
+  left: 7vw;
+  top: 2vw;
+  width: 8vw;
+  border-radius: 5%;
 }
 
-#video {
+.gifss {
     position: relative;
-    left: 55vw;
-    bottom: 30vw;
+    left: 5vw;
+    top: 5vw;
+    padding-bottom: 10vw;
+}
+
+#gif {
+    width: 40vw;
 }
 
 .projectTitles {
-    position: relative;
-    left: 17vw;
-    bottom: 8vw;
-    font-size: 3vw;
-    text-decoration: underline;
+  position: relative;
+  left: 17vw;
+  bottom: 6vw;
+  font-size: 3vw;
+  text-decoration: underline;
 }
 
 .projectContent {
-    width: 50vw;
-    font-size: 2vw;
-    position: relative;
-    bottom: 7vw;
-    left: 4vw;
+  font-size: 2vw;
+  font-size: 1.5vw;
+  font-stretch: expanded;
+}
+
+h2 {
+  font-size: 2vw;
+}
+
+h3 {
+  font-size: 3vw;
+}
+
+.pContainer {
+  width: 50vw;
+  position: relative;
+  bottom: 5vw;
+  left: 4vw;
 }

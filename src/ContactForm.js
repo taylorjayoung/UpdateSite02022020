@@ -42,13 +42,15 @@ class ContactForm extends Component {
     return (
       <Fragment>
         <div>
-          <h1 style={{position: "relative", left: "2vw", top: "2vw"}}>Contact Me</h1>
+          <h1 style={{ position: "relative", left: "2vw", top: "2vw" }}>
+            Contact Me
+          </h1>
           <form
             className="form-style-4"
             id="contactForm"
             autoComplete="off"
             onSubmit={this.handleSubmit}
-            style={{position: "relative", left: "2vw"}}
+            style={{ position: "relative", left: "2vw" }}
           >
             <input
               placeholder="Name"
@@ -79,10 +81,15 @@ class ContactForm extends Component {
               onChange={this.handleChange}
               required
               value={this.state.project_request}
-              placeholder= "I'm all ears!"
+              placeholder="I'm all ears!"
             />
 
-            <input type="submit" value="Submit" className="btn btn--submit" id="submitButton" />
+            <input
+              type="submit"
+              value="Submit"
+              className="btn btn--submit"
+              id="submitButton"
+            />
           </form>
         </div>
       </Fragment>

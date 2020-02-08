@@ -35,12 +35,13 @@ select:focus {
 }
 
 #submitButton {
-position: relative;
-left: 5vw;
-width: 5vw;
-height: 3vw;
-font-size: 1.2vw;
-font-weight: bold;
+  position: relative;
+  left: 5vw;
+  width: 8vw;
+  height: 3vw;
+  font-size: 1.2vw;
+  font-weight: bold;
+  text-align: center;
   background: #ffe203;
   color: #fff;
   border: 1px solid #eee;
