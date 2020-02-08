@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://slickjacket.github.io/home/",
+  "homepage": "https://www.bobbybuffaloboy.com/",
   "dependencies": {
     "@version/react-router-v3": "^1.0.0",
     "emailjs-com": "^2.4.1",
