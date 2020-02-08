@@ -1,0 +1,47 @@
+#aboutMeDiv {
+    margin: auto;
+    border-radius: 2%;
+    width: 80vw;
+    height: 40vw;
+}
+
+#aboutMeContent {
+    margin: auto;
+    border-radius: 1%;
+    background-color: #0e1111;
+    width: 70vw;
+    height: 35vw;
+}
+
+#quote {
+    color: #ffe203;
+    font-style: italic;
+    position: relative;
+    left: 15vw;
+    top: 2vw;
+}
+
+#nameOfQuote {
+    color: #fffafa5b;
+    font-style: italic;
+    font-size: 1.5vw;
+    text-align: right;
+    position: relative;
+    left: 7vw;
+    top: 2vw;
+    border-bottom: .1vw solid #fffafa;
+    width: 50vw;
+    padding-right: 5vw;
+    padding-bottom: 1vw;
+}
+
+#aboutMyContent {
+    color: #fffafa;
+    font-size: 2vw;
+    text-align: center;
+    width: 60vw;
+    margin: auto;
+    position: relative;
+    top: 2vw;
+    
+}

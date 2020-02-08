@@ -2,21 +2,127 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+body {
+  background-color: #fffafa;
+  overflow-x: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#name {
+  color: #fffafa;
+  font-size: 5vw;
+  position: absolute;
+  right: 36vw;
+  top: -2vw;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: -.08em;
+  word-spacing: 1.5vw;
+  /* text-shadow: -1px -1px 1px #fffafa, 1px 1px 1px #0e1111; */
+  text-shadow: .2vw .2vw 0vw #0e1111, .35vw .35vw 0vw #ffe203;
+}
+
+#name:hover {
+  text-shadow: .2vw .2vw 0vw #0e1111, .35vw .35vw 0vw #03ff8e;
+  /* color: #03ff8e; */
+}
+
+.navLinks {
+  text-decoration: none;
+  color: #fffafa;
+  font-size: 2.5vw;
+  position: relative;
+  right: 5vw;
+  top: 8vw;
+  margin-right: 2vw;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  height: 3vw;
+}
+
+#navSocialLinks {
+  width: 3vw;
+  z-index: 9999;
+}
+
+.navSocialLinks {
+  position: absolute;
+  left: 85vw;
+  top: 3vw;
+  width: 10vw;
+  
+}
+
+#navBar {
+  position: sticky;
+  top: 0;
+  background-color: #0e1111;
+  height: 12vw;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-bottom: 0.5vw solid #ffe203;
+  z-index: 9999;
+  -webkit-box-shadow: 0px 12px 15px 0px rgba(0, 0, 0, 0.63);
+  box-shadow: 0px 12px 15px 0px rgba(0, 0, 0, 0.461);
 }
 
-.App-link {
-  color: #09d3ac;
+#profilePhoto {
+  width: 30vw;
+  position: absolute;
+  left: 61.3vw;
+  top: 1.95vw;
+  
 }
+
+#profileBorder {
+  border: 0.4vw solid #fffafa;
+  border-radius: 50%;
+  width: 19vw;
+  height: 19vw;
+  position: absolute;
+  left: 66vw;
+  top: 2.4vw;
+  z-index: 9999;
+  -webkit-box-shadow: 0px 12px 15px 0px rgba(0, 0, 0, 0.63);
+  box-shadow: 0px 12px 15px 0px rgba(0, 0, 0, 0.461);
+  
+}
+
+#profileBorder:hover {
+  border: 0.4vw solid #03ff8e;
+}
+
+#myTitle {
+  font-size: 2vw;
+  position: relative;
+  left: 2vw;
+  top: 1vw;
+  
+}
+
+#heartPic {
+  width: 2vw;
+}
+#line2 {
+  font-size: 2vw;
+  position: relative;
+  left: 2vw;
+}
+
+#contactForm {
+  display:inline;
+
+}
+
+h2 {
+  margin-right: 2vw;
+  color: #ffe203;
+}
+
+#skillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 75vw;
+  position: relative;
+  bottom: 4vw;
+  left: 5vw;
+}
+

@@ -1,0 +1,59 @@
+.text-input {
+  position: relative;
+  left: 0.8vw;
+  width: 58vw;
+  height: 3vw;
+  border: none;
+  border-bottom: 1.5px solid rgba(67, 67, 67, 0.2);
+  font-size: 1.7vw;
+  padding-top: 2%;
+}
+
+.text-input:focus {
+  border-bottom: 1.5px solid #03ff8e;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+::placeholder {
+  color: rgba(84, 83, 83, 0.303);
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: rgba(84, 83, 83, 0.303);
+  opacity: 1;
+}
+
+::-ms-input-placeholder {
+  color: rgba(84, 83, 83, 0.303);
+  opacity: 1;
+}
+
+#submitButton {
+position: relative;
+left: 5vw;
+width: 5vw;
+height: 3vw;
+font-size: 1.2vw;
+font-weight: bold;
+  background: #ffe203;
+  color: #fff;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #eee;
+  text-shadow: none;
+}
+
+#submitButton:hover {
+  background: #03ff8e;
+  color: #fff;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #eee;
+  text-shadow: none;
+}

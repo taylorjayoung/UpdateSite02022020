@@ -1,0 +1,41 @@
+#projectsContainer {
+    position: relative;
+    top: 5vw;
+}
+
+#projectCard {
+    padding-bottom: 2vw;
+    border-top: .2vw solid rgba(99, 99, 99, 0.214);
+    height: 30vw;
+    line-height: 32px;
+}
+
+#logos {
+    position: relative;
+    left: 7vw;
+    /* top: 1vw; */
+    width: 8vw;
+    border-radius: 5%;
+}
+
+#video {
+    position: relative;
+    left: 55vw;
+    bottom: 30vw;
+}
+
+.projectTitles {
+    position: relative;
+    left: 17vw;
+    bottom: 8vw;
+    font-size: 3vw;
+    text-decoration: underline;
+}
+
+.projectContent {
+    width: 50vw;
+    font-size: 2vw;
+    position: relative;
+    bottom: 7vw;
+    left: 4vw;
+}
