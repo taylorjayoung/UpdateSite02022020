@@ -16,11 +16,11 @@ class Main extends Component {
       <BrowserRouter>
         <Fragment>
           <div id="navBar">
-            <Link to="/home">
+            <Link to="/">
               <h1 id="name">BOBBY BUFFALOBOY</h1>
             </Link>
 
-            <Link to="/home" className="navLinks">
+            <Link to="/" className="navLinks">
               Home.js
             </Link>
             <Link to="/portfolio" className="navLinks">
@@ -69,7 +69,7 @@ class Main extends Component {
             </Link>
             <img src={profilePhoto} alt="Bobby BuffaloBoy" id="profilePhoto" />
           </div>
-          <Route exact path="/home" component={Home} />
+          <Route exact path="/" component={Home} />
           <Route path="/portfolio" component={Portfolio} />
           <Route path="/contact" component={Contact} />
         </Fragment>
