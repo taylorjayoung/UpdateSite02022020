@@ -7,7 +7,7 @@
   display: flex;
   flex-basis: 100%;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .projectsContainer {
@@ -28,12 +28,12 @@
 
 .gifss {
   margin-top: 0.5vw;
-  z-index: 0;
+
 }
 
 #gif {
   width: 30vw;
-  z-index: 0;
+
 }
 
 #gif:hover {
@@ -47,7 +47,7 @@
   padding-left: 7vw;
   padding-right: 8vw;
   background-color: black;
-  z-index: 1;
+ 
   opacity: 0.95;
   transition: opacity 0.35s ease-in-out;
   -moz-transition: opacity 0.35s ease-in-out;
@@ -67,6 +67,7 @@
 
 .mainContentLogos {
   max-width: 60%;
+  max-height: 100vh;
   margin-right: 2vw;
   padding-right: 0.8vw;
 }
@@ -87,7 +88,7 @@
   height: 53vw;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-around; */
+  justify-content: space-evenly;
   align-items: center;
   overflow-y: scroll;
 }
@@ -201,11 +202,6 @@ h4 {
   .workContent {
     flex-direction: column;
   }
-  .mainContent {
-    order: 2;
-    overflow-y: visible;
-    max-width: 90%;
-  }
 
   .projectsContainer {
     flex-direction: row;
@@ -213,6 +209,11 @@ h4 {
     max-width: 80%;
     max-height: 40%;
     overflow-y: scroll;
+  }
+  .mainContent {
+    order: 2;
+    overflow-y: visible;
+    max-width: 90%;
   }
 
   .workLinks {
@@ -227,7 +228,6 @@ h4 {
 
   #MySite {
     margin-bottom: -60%;
-    
   }
 
   #Melius2 {
