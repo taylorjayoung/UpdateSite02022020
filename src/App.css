@@ -8,220 +8,235 @@
 }
 
 .drawerItem:hover .icons {
-  -moz-transition: all .5s ease-in;
-  -o-transition: all .5s ease-in;
-  -webkit-transition: all .5s ease-in;
-  transition: all .5s ease-in;
-  color: #03ff8e; 
+  -moz-transition: all 0.5s ease-in;
+  -o-transition: all 0.5s ease-in;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  color: #01b362;
 }
-  body {
-    background-color: rgb(22, 22, 22);
-  }
 
-  #initialsNav {
-    font-family: GoBold;
-    font-size: 60px;
-    /* background-color: rgba(12, 12, 12, 0.639); */
-    color: #03ff8e;
-    text-shadow: 0.2vw 0.2vw 0.1vw #c803ffd7;
-    margin: 0;
-  }
+.MuiListItem-root.Mui-selected .icons {
+  color: #03ff8e;
+}
 
-  #mainNavIcons {
-    display: flex;
-    flex-direction: column;
-  }
+a {
+  color: #c803ffd7;
+}
 
-  #mainNavIcons > * {
-    /* flex: 1, 1, 50%; */
-    fill: #6a6a6aa5;
+@media all and (max-width: 960px) {
+  #aboutMePageContainer {
+    flex-direction: column-reverse !important;
+    background-color: pink;
   }
+}
 
-  /* svg {
+body {
+  background-color: rgb(22, 22, 22);
+}
+
+#initialsNav {
+  font-family: GoBold;
+  font-size: 60px;
+  /* background-color: rgba(12, 12, 12, 0.639); */
+  color: #03ff8e;
+  text-shadow: 0.2vw 0.2vw 0.1vw #c803ffd7;
+  margin: 0;
+}
+
+#mainNavIcons {
+  display: flex;
+  flex-direction: column;
+}
+
+#mainNavIcons > * {
+  /* flex: 1, 1, 50%; */
+  fill: #6a6a6aa5;
+}
+
+/* svg {
     fill: #6a6a6aa5;
   } */
 
-  .navlinks:hover {
-    fill: #03ff8e;
-  }
+.navlinks:hover {
+  fill: #03ff8e;
+}
 
-  #navSocialLinks {
-    width: 40px;
-  }
+#navSocialLinks {
+  width: 40px;
+}
 
-  #navBar {
-    flex-basis: 4%;
-    background-color: rgb(19, 19, 19);
+#navBar {
+  flex-basis: 4%;
+  background-color: rgb(19, 19, 19);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#navBar > * {
+  flex: 1, 1, 33.33%;
+}
+
+.homeWrapper {
+  min-height: 100vh;
+  display: flex;
+}
+
+.homeDiv {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 100%;
+}
+
+#myTitle {
+  font-size: 200px;
+  color: #03ff8e;
+  font-family: Gobold;
+  text-shadow: 0.2vw 0.2vw 0.1vw #c803ffd7;
+  margin: 0;
+}
+
+#homeSubtitle {
+  color: #fffafa;
+  font-family: Oswald;
+  font-size: 35px;
+}
+
+#contactForm {
+  display: inline;
+}
+
+#backgroundpic {
+  position: relative;
+  bottom: 52vw;
+  width: 100vw;
+  opacity: 0.04;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.contactButton {
+  color: #c803ff;
+  border: 0.1vw solid #fffafa;
+  text-align: center;
+  font-size: 22px;
+  font-family: Oswald;
+  border-color: #c803ff;
+}
+
+#contactButton:hover {
+  border-color: #c803ff;
+  background-color: #c803ff;
+  color: rgb(22, 22, 22);
+}
+
+.MuiButton-outlined {
+  border: 1px solid #c803ff !important;
+}
+
+#resumeDL {
+  color: #c803ff;
+  border: 0.1vw solid #fffafa;
+  text-align: center;
+  font-size: 22px;
+  font-family: Oswald;
+  border-color: #c803ff;
+}
+
+#resumeDL:hover {
+  border-color: #c803ff;
+  background-color: #c803ff;
+  color: rgb(22, 22, 22);
+}
+
+#mobile-flex-nav {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+}
+
+@media all and (max-width: 950px) {
+  .homeWrapper {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    justify-content: space-between;
-    align-items: center;
+  }
+  #navBar {
+    flex-direction: row;
+    min-height: 2vh;
+    justify-content: space-around;
+  }
+
+  #navBar #mainNavIcons,
+  #socialIcons {
+    display: none;
   }
 
   #navBar > * {
-    flex:1, 1, 33.33%;
+    flex-basis: 50%;
   }
 
- .homeWrapper {
-   min-height: 100vh;
-   display: flex;
- }
-
- .homeDiv {
-   display: flex;
-   flex-direction: column;
-   min-height: 100vh;
-   justify-content: center;
-   align-items: center;
-   flex-basis: 100%;
- }
-
-  #myTitle {
-    font-size: 200px;
-    color: #03ff8e;
-    font-family: Gobold;
-    text-shadow: 0.2vw 0.2vw 0.1vw #c803ffd7;
-    margin: 0;
-  }
-
-  #homeSubtitle {
-    color: #fffafa;
-    font-family: Oswald;
-    font-size: 35px;
-  }
-
-  #contactForm {
-    display: inline;
-  }
-
-  #backgroundpic {
-    position: relative;
-    bottom: 52vw;
-    width: 100vw;
-    opacity: 0.04;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-  }
-
- .contactButton {
-    color: #c803ff;
-    border: 0.1vw solid #fffafa;
-    text-align: center;
-    font-size: 22px;
-    font-family: Oswald;
-    border-color: #c803ff;
-  }
-
-  #contactButton:hover {
-    border-color: #c803ff;
-    background-color: #c803ff;
-    color: rgb(22, 22, 22);
-  }
-
-  .MuiButton-outlined {
-    border: 1px solid #c803ff !important;
-  }
-
-  #resumeDL {
-    color: #c803ff;
-    border: 0.1vw solid #fffafa;
-    text-align: center;
-    font-size: 22px;
-    font-family: Oswald;
-    border-color: #c803ff;
-  }
-
-  #resumeDL:hover {
-    border-color: #c803ff;
-    background-color: #c803ff;
-    color: rgb(22, 22, 22);
-  }
-
-  #mobile-flex-nav {
-    display: none;
+  #initialsNav {
+    font-size: 40px;
   }
 
   .hamburger {
-    display: none;
+    display: contents;
+    color: #fffafa;
+    font-family: Oswald;
+    cursor: pointer;
+  }
+  .homeLink {
+    flex-basis: 100%;
   }
 
-  @media all and (max-width: 950px) {
-    .homeWrapper {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-    #navBar {
-      flex-direction: row;
-      min-height: 2vh;
-      justify-content: space-around;
-    }
-   
-    #navBar #mainNavIcons, #socialIcons {
-      display: none;
-    }
-
-    #navBar > * {
-      flex-basis: 50%;
-    }
-
-    #initialsNav {
-      font-size: 40px;
-    }
-
-    .hamburger {
-      display: contents;
-      color: #fffafa;
-      font-family: Oswald;
-      cursor: pointer;
-    }
-    .homeLink {
-      flex-basis: 100%;
-    }
-
-    .aboutLink {
-      flex-basis: 50%;
-    }
-
-    .skillsLink {
-      flex-basis: 50%;
-    }
-
-    .portLink {
-      flex-basis: 50%;
-    }
-
-    .contactLink {
-      flex-basis: 50%;
-    }
-
-    #myTitle {
-      font-size: 100px;
-      text-align: center;
-    }
-
-    .navlinks {
-      text-decoration: none;
-    }
-
-    .navlinks p {
-      font-family: Oswald;
-      color: rgb(22, 22, 22);
-      background-color: rgba(255, 255, 255, 0.749);
-      /* border: 1px solid rgb(22, 22, 22); */
-    }
-
-    .mobileSocialIcons {
-      display: flex;
-      justify-content: space-evenly;
-      align-content: center;
-      flex-basis: 100%;
-    }
-
-    .mobileSocialIcons svg {
-      fill: #fffafa;
-    }
-    
-
+  .aboutLink {
+    flex-basis: 50%;
   }
+
+  .skillsLink {
+    flex-basis: 50%;
+  }
+
+  .portLink {
+    flex-basis: 50%;
+  }
+
+  .contactLink {
+    flex-basis: 50%;
+  }
+
+  #myTitle {
+    font-size: 100px;
+    text-align: center;
+  }
+
+  .navlinks {
+    text-decoration: none;
+  }
+
+  .navlinks p {
+    font-family: Oswald;
+    color: rgb(22, 22, 22);
+    background-color: rgba(255, 255, 255, 0.749);
+    /* border: 1px solid rgb(22, 22, 22); */
+  }
+
+  .mobileSocialIcons {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-basis: 100%;
+  }
+
+  .mobileSocialIcons svg {
+    fill: #fffafa;
+  }
+}

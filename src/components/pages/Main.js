@@ -5,44 +5,55 @@ import Contact from "./ContactForm";
 import Home from "./Home";
 import Portfolio from "./Portfolio";
 import Skills from "./Skills";
+import Grid from "@material-ui/core/Grid";
+import { makeStyles } from "@material-ui/styles";
 
 import AboutMe from "./AboutMe";
 
-class Main extends Component {
-  state = {};
-  render() {
-    return (
-      <Switch>
-        <Fragment>
-          <Route
-            exact
-            path={"/"}
-            render={(routerProps) => <Home {...routerProps} />}
-          />
-          <Route
-            exact
-            path={"/about"}
-            render={(routerProps) => <AboutMe {...routerProps} />}
-          />
-          <Route
-            exact
-            path={"/skills"}
-            render={(routerProps) => <Skills {...routerProps} />}
-          />
-          <Route
-            exact
-            path={"/portfolio"}
-            render={(routerProps) => <Portfolio {...routerProps} />}
-          />
-          <Route
-            exact
-            path={"/contact"}
-            render={(routerProps) => <Contact {...routerProps} />}
-          />
-        </Fragment>
-      </Switch>
-    );
-  }
-}
+const permDrawerWidth = 70;
 
-export default Main;
+const useStyles = makeStyles((theme) => ({
+  mainContainer: {
+    width: `calc(100% - ${permDrawerWidth}px)`,
+    marginLeft: `${permDrawerWidth}px`,
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+      margin: 0,
+    },
+  },
+}));
+
+export default function Main() {
+  const classes = useStyles();
+  return (
+    <Switch>
+      <Grid container className={classes.mainContainer}>
+        <Route
+          exact
+          path={"/"}
+          render={(routerProps) => <Home {...routerProps} />}
+        />
+        <Route
+          exact
+          path={"/about"}
+          render={(routerProps) => <AboutMe {...routerProps} />}
+        />
+        <Route
+          exact
+          path={"/skills"}
+          render={(routerProps) => <Skills {...routerProps} />}
+        />
+        <Route
+          exact
+          path={"/portfolio"}
+          render={(routerProps) => <Portfolio {...routerProps} />}
+        />
+        <Route
+          exact
+          path={"/contact"}
+          render={(routerProps) => <Contact {...routerProps} />}
+        />
+      </Grid>
+    </Switch>
+  );
+}

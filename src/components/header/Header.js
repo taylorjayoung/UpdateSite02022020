@@ -20,6 +20,9 @@ import Drawer from "@material-ui/core/Drawer";
 import HomeIcon from "@material-ui/icons/Home";
 import WorkIcon from "@material-ui/icons/Work";
 import EmailIcon from "@material-ui/icons/Email";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import InstagramIcon from "@material-ui/icons/Instagram";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
 
 import logo from "../assets/media/MySiteLogo.png";
 
@@ -52,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("sm")]: {
       width: "100%",
-      height: "90px",
+      height: "70px",
     },
   },
   toolbarMargin: {
@@ -117,6 +120,12 @@ const useStyles = makeStyles((theme) => ({
     overflow: "hidden",
     backgroundColor: theme.palette.primary.main,
   },
+  socialIcons: {
+    marginLeft: "7px",
+    [theme.breakpoints.down("sm")]: {
+    marginLeft: "12px"
+    }
+  }
 }));
 
 export default function Header(props) {
@@ -129,7 +138,6 @@ export default function Header(props) {
 
   const listRoutes = () => (
     <Fragment>
-      <Divider />
       <List className={classes.drawerList} disablePadding>
         {routes.map((route) => (
           <ListItem
@@ -144,13 +152,48 @@ export default function Header(props) {
             selected={value === route.value}
           >
             <ListItemText className={classes.drawerItemText} disableTypography>
-              {route.icon} {route.name}
+              {route.icon}
             </ListItemText>
+          </ListItem>
+        ))}
+      </List>
+      <Divider/>
+    </Fragment>
+  );
+
+  const listSocialRoutes = () => (
+    <Fragment>
+      <List className={classes.drawerList} disablePadding>
+        {socialRoutes.map((route) => (
+          <ListItem
+            className={"drawerItem"}
+            onClick={() => {
+              setOpenDrawer(false);
+              setValue(route.value);
+            }}
+            selected={value === route.value}
+          >
+            <a href={route.link} className={classes.socialIcons}>{route.icon}</a>
           </ListItem>
         ))}
       </List>
     </Fragment>
   );
+
+  const socialRoutes = [
+    {
+      link: "https://github.com/SlickJacket",
+      icon: <GitHubIcon className={"icons"} />,
+    },
+    {
+      link: "https://www.instagram.com/bobbybuffaloboy/?hl=en",
+      icon: <InstagramIcon className={"icons"} />,
+    },
+    {
+      link: "https://www.linkedin.com/in/bobby-buffaloboy-4ba4ba79/",
+      icon: <LinkedInIcon className={"icons"} />,
+    },
+  ];
 
   const routes = [
     { link: "/", value: 0, icon: <HomeIcon className={"icons"} /> },
@@ -200,6 +243,8 @@ export default function Header(props) {
         <img alt="Company Logo" src={logo} className={classes.permDrawerLogo} />
       </Button>
       {listRoutes()}
+      <Divider />
+      {listSocialRoutes()}
     </Drawer>
   );
 
@@ -222,6 +267,7 @@ export default function Header(props) {
           <img alt="Company Logo" src={logo} className={classes.drawerLogo} />
         </Button>
         {listRoutes()}
+        {listSocialRoutes()}
       </SwipeableDrawer>
       <IconButton
         onClick={() => setOpenDrawer(!openDrawer)}
