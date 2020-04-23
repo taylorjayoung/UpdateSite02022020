@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import AppBar from "@material-ui/core/AppBar";
 import ToolBar from "@material-ui/core/ToolBar";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
@@ -124,19 +124,33 @@ export default function Header(props) {
   const theme = useTheme();
   const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
   const matches = useMediaQuery(theme.breakpoints.down("sm"));
-
   const [openDrawer, setOpenDrawer] = useState(false);
   const [value, setValue] = useState(0);
-  const [openMenu, setOpenMenu] = useState(false);
 
-  //   const history = useHistory();
-
-  const handleClick = () => {
-    setOpenDrawer(false);
-    localStorage.clear();
-    // history.push("/admin/login");
-    window.location.reload(false);
-  };
+  const listRoutes = () => (
+    <Fragment>
+      <Divider />
+      <List className={classes.drawerList} disablePadding>
+        {routes.map((route) => (
+          <ListItem
+            className={"drawerItem"}
+            button
+            onClick={() => {
+              setOpenDrawer(false);
+              setValue(route.value);
+            }}
+            component={Link}
+            to={route.link}
+            selected={value === route.value}
+          >
+            <ListItemText className={classes.drawerItemText} disableTypography>
+              {route.icon} {route.name}
+            </ListItemText>
+          </ListItem>
+        ))}
+      </List>
+    </Fragment>
+  );
 
   const routes = [
     { link: "/", value: 0, icon: <HomeIcon className={"icons"} /> },
@@ -158,19 +172,19 @@ export default function Header(props) {
     },
   ];
 
-    useEffect(() => {
-      routes.forEach((route) => {
-        switch (window.location.pathname) {
-          case `${route.link}`:
-            if (value !== route.value) {
-              setValue(route.value);
-            }
-            break;
-          default:
-            break;
-        }
-      });
-    }, [value, routes]);
+  useEffect(() => {
+    routes.forEach((route) => {
+      switch (window.location.pathname) {
+        case `${route.link}`:
+          if (value !== route.value) {
+            setValue(route.value);
+          }
+          break;
+        default:
+          break;
+      }
+    });
+  }, [value, routes]);
 
   const dashboard = (
     <Drawer
@@ -182,34 +196,10 @@ export default function Header(props) {
       anchor="left"
     >
       <div className={classes.toolbar} />
-      <Button
-        component={Link}
-        to="/"
-        disableRipple
-        onClick={() => setValue(0)}
-      >
+      <Button component={Link} to="/" disableRipple onClick={() => setValue(0)}>
         <img alt="Company Logo" src={logo} className={classes.permDrawerLogo} />
       </Button>
-      <Divider />
-      <List className={classes.drawerList} disablePadding>
-        {routes.map((route) => (
-          <ListItem
-            className={"drawerItem"}
-            button
-            onClick={() => {
-              setOpenDrawer(false);
-              setValue(route.value);
-            }}
-              component={Link}
-              to={route.link}
-            selected={value === route.value}
-          >
-            <ListItemText className={classes.drawerItemText} disableTypography>
-              {route.icon} {route.name}
-            </ListItemText>
-          </ListItem>
-        ))}
-      </List>
+      {listRoutes()}
     </Drawer>
   );
 
@@ -224,38 +214,14 @@ export default function Header(props) {
         classes={{ paper: classes.drawer }}
       >
         <Button
-            component={Link}
-            to="/"
+          component={Link}
+          to="/"
           disableRipple
           onClick={() => setValue(0)}
         >
           <img alt="Company Logo" src={logo} className={classes.drawerLogo} />
         </Button>
-        <Divider />
-        <Divider />
-        <List className={classes.drawerList} disablePadding>
-          {routes.map((route) => (
-            <ListItem
-              className={"drawerItem"}
-              divider
-              button
-              onClick={() => {
-                setOpenDrawer(false);
-                setValue(route.value);
-              }}
-              component={Link}
-              to={route.link}
-              selected={value === route.value}
-            >
-              <ListItemText
-                className={classes.drawerItemText}
-                disableTypography
-              >
-                {route.icon} {route.name}
-              </ListItemText>
-            </ListItem>
-          ))}
-        </List>
+        {listRoutes()}
       </SwipeableDrawer>
       <IconButton
         onClick={() => setOpenDrawer(!openDrawer)}
@@ -273,8 +239,8 @@ export default function Header(props) {
           <ToolBar>
             {matches ? drawer : null}
             <Button
-                component={Link}
-                to="/"
+              component={Link}
+              to="/"
               disableRipple
               onClick={() => setValue(0)}
             >

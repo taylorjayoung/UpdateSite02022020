@@ -104,7 +104,7 @@
     filter: grayscale(100%);
   }
 
-  #contactButton {
+ .contactButton {
     color: #c803ff;
     border: 0.1vw solid #fffafa;
     text-align: center;
@@ -117,6 +117,10 @@
     border-color: #c803ff;
     background-color: #c803ff;
     color: rgb(22, 22, 22);
+  }
+
+  .MuiButton-outlined {
+    border: 1px solid #c803ff !important;
   }
 
   #resumeDL {
