@@ -4,11 +4,11 @@ import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 const breakpoints = createBreakpoints({});
 
 const navbarBlack = "rgb(19, 19, 19)";
-const traxGrey = "#262626";
+const myPurple = "#c803ffd7";
 export default createMuiTheme({
   palette: {
     common: {
-      grey: `${traxGrey}`,
+      purple: `${myPurple}`,
       gold: "#FFDF00",
       goldDark: "#eacc00",
     },

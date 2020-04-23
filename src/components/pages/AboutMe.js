@@ -10,7 +10,7 @@ import "../../App.css";
 
 const useStyles = makeStyles((theme) => ({
   profilePhoto: {
-    width: "100%"
+    width: "100%",
   },
   paragraphs: {
     fontFamily: "Roboto Condensed",
@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "right",
   },
   divider: {
-    backgroundColor: "white",
+    backgroundColor: theme.palette.common.purple,
     margin: "1.1em",
   },
 }));
@@ -36,18 +36,21 @@ export default function AboutMe(props) {
   const theme = useTheme();
   const [containerDirection, setContainerDirection] = useState("row");
   const [containerWrap, setContainerWrap] = useState("wrap");
-  const [containerJustify, setContainerJustify] = useState("space-evenly")
+  const [containerJustify, setContainerJustify] = useState("space-evenly");
+  const [quoteSize, setQuoteSize] = useState("h3");
   const matches = useMediaQuery(theme.breakpoints.down("md"));
 
   useEffect(() => {
     if (matches) {
       setContainerDirection("column-reverse");
       setContainerWrap("nowrap");
-      setContainerJustify("center")
+      setContainerJustify("center");
+      setQuoteSize("h4");
     } else {
       setContainerDirection("row");
       setContainerWrap("wrap");
-      setContainerJustify("space-evenly")
+      setContainerJustify("space-evenly");
+      setQuoteSize("h3");
     }
   });
 
@@ -64,7 +67,7 @@ export default function AboutMe(props) {
           <Grid item xs={11}>
             <Grid container direction="column" spacing={2}>
               <Grid item xs={12}>
-                <Typography variant="h3" className={classes.quote}>
+                <Typography variant={quoteSize} className={classes.quote}>
                   “I am, above all, what excites me.”
                 </Typography>
               </Grid>
@@ -81,22 +84,29 @@ export default function AboutMe(props) {
           </Grid>
         </Grid>
         <Divider className={classes.divider} />
-        <Grid item xs={11}>
-          <Typography className={classes.paragraphs}>
-            What makes this quote so powerful, is the force of connection I have
-            to it. If I find something interesting, I will immediately form an
-            obsession, then, that obsession grows exponentially. Whether that be
-            learning how to brew my own moonshine, to performing in a metal
-            band, designing and hand carving rings, learning the entire adobe
-            suite, to becoming a Fullstack developer.
-          </Typography>
-          <Typography className={classes.paragraphs}>
-            Yes, you can focus all your life on one thing, but I believe it's
-            the accumulation of several fields of study that grants one the
-            skill to see what others do not. Also, I believe it’s just a much
-            more fulfilling life. You only live once, so have fun, make the best
-            out of it and most importantly, Make It Count!.
-          </Typography>
+        <Grid item xs={10} sm={11}>
+          <Grid container direction="column" alignItems="center">
+            <Grid item xs={11}>
+              <Typography className={classes.paragraphs}>
+                What makes this quote so powerful, is the force of connection I
+                have to it. If I find something interesting, I will immediately
+                form an obsession, then, that obsession grows exponentially.
+                Whether that be learning how to brew my own moonshine, to
+                performing in a metal band, designing and hand carving rings,
+                learning the entire adobe suite, to becoming a Fullstack
+                developer.
+              </Typography>
+            </Grid>
+            <Grid item xs={11}>
+              <Typography className={classes.paragraphs}>
+                Yes, you can focus all your life on one thing, but I believe
+                it's the accumulation of several fields of study that grants one
+                the skill to see what others do not. Also, I believe it’s just a
+                much more fulfilling life. You only live once, so have fun, make
+                the best out of it and most importantly, Make It Count!.
+              </Typography>
+            </Grid>
+          </Grid>
         </Grid>
       </Grid>
       <Grid item xs={7} sm={5} lg={5}>

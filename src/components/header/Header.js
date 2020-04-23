@@ -56,13 +56,15 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       width: "100%",
       height: "70px",
+      position: "fixed",
+      top: "-1px"
     },
   },
   toolbarMargin: {
     ...theme.mixins.toolbar,
     marginBottom: "2em",
     [theme.breakpoints.down("sm")]: {
-      marginBottom: "1.5em",
+      marginBottom: "1.7em",
     },
     [theme.breakpoints.down("xs")]: {
       marginBottom: "2em",
@@ -123,9 +125,9 @@ const useStyles = makeStyles((theme) => ({
   socialIcons: {
     marginLeft: "7px",
     [theme.breakpoints.down("sm")]: {
-    marginLeft: "12px"
-    }
-  }
+      marginLeft: "12px",
+    },
+  },
 }));
 
 export default function Header(props) {
@@ -157,7 +159,7 @@ export default function Header(props) {
           </ListItem>
         ))}
       </List>
-      <Divider/>
+      <Divider />
     </Fragment>
   );
 
@@ -173,7 +175,9 @@ export default function Header(props) {
             }}
             selected={value === route.value}
           >
-            <a href={route.link} className={classes.socialIcons}>{route.icon}</a>
+            <a href={route.link} className={classes.socialIcons}>
+              {route.icon}
+            </a>
           </ListItem>
         ))}
       </List>

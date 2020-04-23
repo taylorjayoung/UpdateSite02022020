@@ -13,8 +13,8 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "1.2rem",
     "&:hover": {
       color: "rgb(22, 22, 22)",
-      background: "#c803ff"
-    }
+      background: "#c803ff",
+    },
   },
 }));
 
@@ -51,7 +51,12 @@ export default function Home() {
                   </Link>
                 </Grid>
                 <Grid item xs={5}>
-                  <a href={Resume} style={{ textDecoration: "none" }} download>
+                  <a
+                    href={
+                      "https://drive.google.com/file/d/19B5DBWxY8vsvAUqLI__YpRZ6_4WAlx3y/view?usp=sharing"
+                    }
+                    style={{ textDecoration: "none" }}
+                  >
                     <Button variant="outlined" className={classes.buttons}>
                       Resume
                     </Button>
