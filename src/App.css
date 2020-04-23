@@ -7,6 +7,36 @@
   src: url("./components/assets/fonts/Oswald-Regular.ttf");
 }
 
+
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+  background-color: none;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgb(22, 22, 22);
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.44, #9806c0d7),
+    color-stop(0.72, #9203b9d7),
+    color-stop(0.86, #a705d4d7)
+  );
+}
+
+body {
+  background-color: rgb(22, 22, 22);
+  overflow-x: hidden !important;
+}
+
 .drawerItem:hover .icons {
   -moz-transition: all 0.5s ease-in;
   -o-transition: all 0.5s ease-in;
@@ -30,9 +60,7 @@ a {
   }
 }
 
-body {
-  background-color: rgb(22, 22, 22);
-}
+
 
 #initialsNav {
   font-family: GoBold;
