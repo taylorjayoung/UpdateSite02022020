@@ -1,10 +1,10 @@
 import React, { Component, Fragment } from "react";
 import "./App.css";
-import Main from "./Main.js";
+import Main from "./components/pages/Main.js";
 import Header from "./components/header/Header";
 
 import { ThemeProvider } from "@material-ui/styles";
-import theme from "./Theme";
+import theme from "./components/pages/Theme";
 
 class App extends Component {
   render() {

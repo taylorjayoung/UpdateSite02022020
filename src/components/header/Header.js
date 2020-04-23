@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from "react";
-// import { Link, useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import AppBar from "@material-ui/core/AppBar";
 import ToolBar from "@material-ui/core/ToolBar";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
@@ -12,31 +12,16 @@ import Divider from "@material-ui/core/Divider";
 import MenuIcon from "@material-ui/icons/Menu";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-import MailIcon from "@material-ui/icons/Mail";
 import FaceIcon from "@material-ui/icons/Face";
-import YouTubeIcon from "@material-ui/icons/YouTube";
-import PhotoLibraryIcon from "@material-ui/icons/PhotoLibrary";
-import LibraryBooksIcon from "@material-ui/icons/LibraryBooks";
 import AssessmentIcon from "@material-ui/icons/Assessment";
-import SettingsIcon from "@material-ui/icons/Settings";
-import FlareOutlinedIcon from "@material-ui/icons/FlareOutlined";
-import CreateOutlinedIcon from "@material-ui/icons/CreateOutlined";
 import ListItemText from "@material-ui/core/ListItemText";
 import IconButton from "@material-ui/core/IconButton";
 import Drawer from "@material-ui/core/Drawer";
-import ExpandLess from "@material-ui/icons/ExpandLess";
-import ExpandMore from "@material-ui/icons/ExpandMore";
-import Collapse from "@material-ui/core/Collapse";
+import HomeIcon from "@material-ui/icons/Home";
+import WorkIcon from "@material-ui/icons/Work";
+import EmailIcon from "@material-ui/icons/Email";
 
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableContainer from "@material-ui/core/TableContainer";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
-import Paper from "@material-ui/core/Paper";
-
-import logo from "../../MySiteLogo.png";
+import logo from "../assets/media/MySiteLogo.png";
 
 function ElevationScroll(props) {
   const { children } = props;
@@ -51,7 +36,7 @@ function ElevationScroll(props) {
   });
 }
 
-const permDrawerWidth = 50;
+const permDrawerWidth = 70;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -63,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: permDrawerWidth,
     justifyContent: "center",
     [theme.breakpoints.up("md")]: {
-        display: "none"
+      display: "none",
     },
     [theme.breakpoints.down("sm")]: {
       width: "100%",
@@ -80,47 +65,13 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: "2em",
     },
   },
-    logo: {
-      height: "7em",
-      [theme.breakpoints.up("md")]: {
-        display: "none",
-      },
-      [theme.breakpoints.down("sm")]: {
-        height: "4.5em",
-      },
-    },
-  tabContainer: {
-    marginLeft: "auto",
-  },
-  tab: {
-    ...theme.typography.tab,
-    minWidth: 10,
-    marginLeft: "15px",
-  },
-  button: {
-    ...theme.typography.estimate,
-    width: "15%",
-    marginLeft: "auto",
-    textTransform: "none",
-    borderRadius: 0,
-    [theme.breakpoints.down("md")]: {
-      width: "20%",
+  logo: {
+    height: "7em",
+    [theme.breakpoints.up("md")]: {
+      display: "none",
     },
     [theme.breakpoints.down("sm")]: {
-      margin: "auto",
-      width: "130px",
-    },
-  },
-  menu: {
-    backgroundColor: theme.palette.primary.main,
-    color: "white",
-    borderRadius: 0,
-  },
-  menuItem: {
-    ...theme.typography.tab,
-    opacity: 0.6,
-    "&:hover": {
-      opacity: 1,
+      height: "4.5em",
     },
   },
   iconContainer: {
@@ -129,19 +80,20 @@ const useStyles = makeStyles((theme) => ({
   drawerIcon: {
     height: "50px",
     width: "50px",
-    color: "white"
+    color: "white",
   },
   drawer: {
     backgroundColor: theme.palette.primary.main,
     width: "5rem",
+    overflow: "hidden",
   },
   drawerList: {
     marginTop: "2rem",
     justifyContent: "center",
   },
-    drawerLogo: {
-      height: "7em",
-    },
+  drawerLogo: {
+    height: "7em",
+  },
   drawerItem: {},
   drawerItemText: {
     ...theme.typography.tab,
@@ -156,35 +108,14 @@ const useStyles = makeStyles((theme) => ({
       display: "none",
     },
   },
-    permDrawerLogo: {
-      height: "10em",
-      paddingTop: "none",
-    },
+  permDrawerLogo: {
+    height: "5em",
+    paddingTop: "none",
+  },
   permDrawerPaper: {
     width: permDrawerWidth,
     overflow: "hidden",
     backgroundColor: theme.palette.primary.main,
-  },
-  // necessary for content to be below app bar
-  //   toolbar: theme.mixins.toolbar,
-  content: {
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.default,
-    padding: theme.spacing(3),
-  },
-  nested: {
-    paddingLeft: theme.spacing(4),
-  },
-  table: {
-    minWidth: 650,
-    marginRight: "auto",
-  },
-  tableContainer: {
-    width: "50rem",
-    marginRight: "auto",
-  },
-  expandIcons: {
-    color: "white",
   },
 }));
 
@@ -208,40 +139,38 @@ export default function Header(props) {
   };
 
   const routes = [
-    { value: 0, icon: <MailIcon /> },
-    { value: 1, icon: <FaceIcon /> },
-    { value: 2, icon: <YouTubeIcon /> },
+    { link: "/", value: 0, icon: <HomeIcon className={"icons"} /> },
+    { link: "/about", value: 1, icon: <FaceIcon className={"icons"} /> },
     {
+      link: "skills",
+      value: 2,
+      icon: <AssessmentIcon className={"icons"} />,
+    },
+    {
+      link: "/portfolio",
       value: 3,
-      icon: <PhotoLibraryIcon />,
+      icon: <WorkIcon className={"icons"} />,
     },
     {
+      link: "/contact",
       value: 4,
-      icon: <LibraryBooksIcon />,
-    },
-    {
-      value: 5,
-      icon: <AssessmentIcon />,
-    },
-    {
-      value: 6,
-      icon: <SettingsIcon />,
+      icon: <EmailIcon className={"icons"} />,
     },
   ];
 
-  //   useEffect(() => {
-  //     routes.forEach((route) => {
-  //       switch (window.location.pathname) {
-  //         case `${route.link}`:
-  //           if (value !== route.value) {
-  //             setValue(route.value);
-  //           }
-  //           break;
-  //         default:
-  //           break;
-  //       }
-  //     });
-  //   }, [value, routes]);
+    useEffect(() => {
+      routes.forEach((route) => {
+        switch (window.location.pathname) {
+          case `${route.link}`:
+            if (value !== route.value) {
+              setValue(route.value);
+            }
+            break;
+          default:
+            break;
+        }
+      });
+    }, [value, routes]);
 
   const dashboard = (
     <Drawer
@@ -254,8 +183,8 @@ export default function Header(props) {
     >
       <div className={classes.toolbar} />
       <Button
-        // component={Link}
-        to="/admin/inbox"
+        component={Link}
+        to="/"
         disableRipple
         onClick={() => setValue(0)}
       >
@@ -263,91 +192,23 @@ export default function Header(props) {
       </Button>
       <Divider />
       <List className={classes.drawerList} disablePadding>
-        {routes.map((route) =>
-          route.name !== "Resources" ? (
-            <ListItem
-              className={classes.drawerItem}
-              divider
-              button
-              onClick={() => {
-                setOpenDrawer(false);
-                setValue(route.value);
-              }}
-              //   component={Link}
-              //   to={route.link}
-              selected={value === route.value}
-            >
-              <ListItemText
-                className={classes.drawerItemText}
-                disableTypography
-              >
-                {route.icon} {route.name}
-              </ListItemText>
-            </ListItem>
-          ) : (
-            <Fragment>
-              {" "}
-              <ListItem
-                className={classes.drawerItem}
-                divider
-                button
-                onClick={() => {
-                  setOpenDrawer(false);
-                  setValue(4);
-                }}
-                selected={value === 4}
-              >
-                <ListItemText
-                  className={classes.drawerItemText}
-                  disableTypography
-                >
-                  <LibraryBooksIcon /> Resources
-                </ListItemText>
-                {openMenu ? (
-                  <ExpandLess
-                    className={classes.expandIcons}
-                    onClick={() => setOpenMenu(false)}
-                  />
-                ) : (
-                  <ExpandMore
-                    className={classes.expandIcons}
-                    onClick={() => setOpenMenu(true)}
-                  />
-                )}
-              </ListItem>
-              <Collapse in={openMenu} timeout="auto" unmountOnExit>
-                <List component="div" disablePadding>
-                  <ListItem
-                    button
-                    className={classes.nested}
-                    // component={Link}
-                    // to="/admin/stones"
-                  >
-                    <ListItemText
-                      className={classes.drawerItemText}
-                      disableTypography
-                    >
-                      <FlareOutlinedIcon /> Stones
-                    </ListItemText>
-                  </ListItem>
-                  <ListItem
-                    button
-                    className={classes.nested}
-                    // component={Link}
-                    // to="/admin/notes"
-                  >
-                    <ListItemText
-                      className={classes.drawerItemText}
-                      disableTypography
-                    >
-                      <CreateOutlinedIcon /> Notes
-                    </ListItemText>
-                  </ListItem>
-                </List>
-              </Collapse>
-            </Fragment>
-          )
-        )}
+        {routes.map((route) => (
+          <ListItem
+            className={"drawerItem"}
+            button
+            onClick={() => {
+              setOpenDrawer(false);
+              setValue(route.value);
+            }}
+              component={Link}
+              to={route.link}
+            selected={value === route.value}
+          >
+            <ListItemText className={classes.drawerItemText} disableTypography>
+              {route.icon} {route.name}
+            </ListItemText>
+          </ListItem>
+        ))}
       </List>
     </Drawer>
   );
@@ -363,8 +224,8 @@ export default function Header(props) {
         classes={{ paper: classes.drawer }}
       >
         <Button
-          //   component={Link}
-          //   to="/admin/inbox"
+            component={Link}
+            to="/"
           disableRipple
           onClick={() => setValue(0)}
         >
@@ -375,15 +236,15 @@ export default function Header(props) {
         <List className={classes.drawerList} disablePadding>
           {routes.map((route) => (
             <ListItem
-              className={classes.drawerItem}
+              className={"drawerItem"}
               divider
               button
               onClick={() => {
                 setOpenDrawer(false);
                 setValue(route.value);
               }}
-              // component={Link}
-              // to={route.link}
+              component={Link}
+              to={route.link}
               selected={value === route.value}
             >
               <ListItemText
@@ -401,7 +262,7 @@ export default function Header(props) {
         className={classes.iconContainer}
         disableRipple
       >
-        <MenuIcon  className={classes.drawerIcon} />
+        <MenuIcon className={classes.drawerIcon} />
       </IconButton>
     </Fragment>
   );
@@ -412,8 +273,8 @@ export default function Header(props) {
           <ToolBar>
             {matches ? drawer : null}
             <Button
-              //   component={Link}
-              //   to="/admin/inbox"
+                component={Link}
+                to="/"
               disableRipple
               onClick={() => setValue(0)}
             >

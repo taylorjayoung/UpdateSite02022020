@@ -1,12 +1,19 @@
 @font-face {
   font-family: Gobold;
-  src: url("Gobold-High-Bold.otf");
+  src: url("./components/assets/fonts/Gobold-High-Bold.otf");
 }
 @font-face {
   font-family: Oswald;
-  src: url("Oswald-Regular.ttf");
+  src: url("./components/assets/fonts/Oswald-Regular.ttf");
 }
 
+.drawerItem:hover .icons {
+  -moz-transition: all .5s ease-in;
+  -o-transition: all .5s ease-in;
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
+  color: #03ff8e; 
+}
   body {
     background-color: rgb(22, 22, 22);
   }
@@ -165,33 +172,6 @@
       font-family: Oswald;
       cursor: pointer;
     }
-
-    #mobile-flex-nav {
-      justify-content: center;
-      background-color: #fffafa;
-      /* min-width: 80vw; */
-      background-image: url('./america-american-flag-architecture-bridge-450597.jpg');
-      background-size: 100%;
-      background-position-y: center;
-      filter: grayscale(100%)
-      
-    }
-
-    #mobile-flex-nav > * {
-      text-align: center;
-    }
-
-    #mainNavIcons {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-content: space-between;
-    }
-
-    /* #mainNavIcons > * {
-      flex-basis: 50%;
-    } */
-
     .homeLink {
       flex-basis: 100%;
     }

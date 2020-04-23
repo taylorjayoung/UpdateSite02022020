@@ -1,6 +1,6 @@
 import { createMuiTheme } from "@material-ui/core/styles";
 
-const navbar = "rgb(19, 19, 19)";
+const navbarBlack = "rgb(19, 19, 19)";
 const traxGrey = "#262626";
 export default createMuiTheme({
   palette: {
@@ -10,10 +10,10 @@ export default createMuiTheme({
       goldDark: "#eacc00"
     },
     primary: {
-      main: `${navbar}`
+      main: `${navbarBlack}`
     },
     secondary: {
-      main: `${traxGrey}`
+      main: `#03ff8e`
     },
     background: {
       paper: "#fff",
