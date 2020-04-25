@@ -1,6 +1,5 @@
-import React, { Component, Fragment } from "react";
+import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
-import Resume from "../assets/downloadable/Resume.docx";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/styles";
@@ -22,8 +21,8 @@ export default function Home() {
   const classes = useStyles();
 
   return (
-    <Fragment>
-      <Grid container justify="center" alignItems="center">
+    <div className="page">
+      <Grid container justify="center" alignItems="center" >
         <Grid item xs={11}>
           <Grid
             container
@@ -67,6 +66,6 @@ export default function Home() {
           </Grid>
         </Grid>
       </Grid>
-    </Fragment>
+    </div>
   );
 }

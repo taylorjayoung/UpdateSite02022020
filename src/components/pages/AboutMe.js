@@ -55,67 +55,75 @@ export default function AboutMe(props) {
   });
 
   return (
-    <Grid
-      container
-      justify={containerJustify}
-      alignItems="center"
-      direction={containerDirection}
-      wrap={containerWrap}
-    >
-      <Grid item xs={12} lg={5}>
-        <Grid container direction="column" justify="center" alignItems="center">
-          <Grid item xs={11}>
-            <Grid container direction="column" spacing={2}>
-              <Grid item xs={12}>
-                <Typography variant={quoteSize} className={classes.quote}>
-                  “I am, above all, what excites me.”
+    <div className="page">
+      <Grid
+        container
+        justify={containerJustify}
+        alignItems="center"
+        direction={containerDirection}
+        wrap={containerWrap}
+      >
+        <Grid item xs={12} lg={5}>
+          <Grid
+            container
+            direction="column"
+            justify="center"
+            alignItems="center"
+          >
+            <Grid item xs={11}>
+              <Grid container direction="column" spacing={2}>
+                <Grid item xs={12}>
+                  <Typography variant={quoteSize} className={classes.quote}>
+                    “I am, above all, what excites me.”
+                  </Typography>
+                </Grid>
+                <Grid item xs={12}>
+                  <Typography
+                    variant="h5"
+                    color="secondary"
+                    className={classes.author}
+                  >
+                    -Sylvan Tompkins
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+          <Divider className={classes.divider} />
+          <Grid item xs={10} sm={11}>
+            <Grid container direction="column" alignItems="center">
+              <Grid item xs={11}>
+                <Typography className={classes.paragraphs}>
+                  What makes this quote so powerful, is the force of connection
+                  I have to it. If I find something interesting, I will
+                  immediately form an obsession, then, that obsession grows
+                  exponentially. Whether that be learning how to brew my own
+                  moonshine, to performing in a metal band, designing and hand
+                  carving rings, learning the entire adobe suite, to becoming a
+                  Fullstack developer.
                 </Typography>
               </Grid>
-              <Grid item xs={12}>
-                <Typography
-                  variant="h5"
-                  color="secondary"
-                  className={classes.author}
-                >
-                  -Sylvan Tompkins
+              <Grid item xs={11}>
+                <Typography className={classes.paragraphs}>
+                  Yes, you can focus all your life on one thing, but I believe
+                  it's the accumulation of several fields of study that grants
+                  one the skill to see what others do not. Also, I believe it’s
+                  just a much more fulfilling life. You only live once, so have
+                  fun, make the best out of it and most importantly, Make It
+                  Count!.
                 </Typography>
               </Grid>
             </Grid>
           </Grid>
         </Grid>
-        <Divider className={classes.divider} />
-        <Grid item xs={10} sm={11}>
-          <Grid container direction="column" alignItems="center">
-            <Grid item xs={11}>
-              <Typography className={classes.paragraphs}>
-                What makes this quote so powerful, is the force of connection I
-                have to it. If I find something interesting, I will immediately
-                form an obsession, then, that obsession grows exponentially.
-                Whether that be learning how to brew my own moonshine, to
-                performing in a metal band, designing and hand carving rings,
-                learning the entire adobe suite, to becoming a Fullstack
-                developer.
-              </Typography>
-            </Grid>
-            <Grid item xs={11}>
-              <Typography className={classes.paragraphs}>
-                Yes, you can focus all your life on one thing, but I believe
-                it's the accumulation of several fields of study that grants one
-                the skill to see what others do not. Also, I believe it’s just a
-                much more fulfilling life. You only live once, so have fun, make
-                the best out of it and most importantly, Make It Count!.
-              </Typography>
-            </Grid>
-          </Grid>
+        <Grid item xs={7} sm={5} lg={5}>
+          <img
+            src={profilePhoto}
+            alt="Bobby BuffaloBoy"
+            className={classes.profilePhoto}
+          />
         </Grid>
       </Grid>
-      <Grid item xs={7} sm={5} lg={5}>
-        <img
-          src={profilePhoto}
-          alt="Bobby BuffaloBoy"
-          className={classes.profilePhoto}
-        />
-      </Grid>
-    </Grid>
+    </div>
   );
 }

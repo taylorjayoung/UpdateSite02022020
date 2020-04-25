@@ -23,6 +23,7 @@ import EmailIcon from "@material-ui/icons/Email";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import "../../App.css";
 
 import logo from "../assets/media/MySiteLogo.png";
 
