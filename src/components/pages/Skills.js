@@ -54,11 +54,10 @@ const useStyles = makeStyles((theme) => ({
   divider: {
     backgroundColor: theme.palette.common.purple,
     margin: "1.1em",
- 
   },
   dividerItem: {
     position: "relative",
-    marginLeft: "10px"
+    marginLeft: "10px",
   },
   htmlIcons: {
     width: "50%",
