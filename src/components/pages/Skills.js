@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
@@ -102,8 +102,8 @@ export default function Skills() {
   const classes = useStyles();
 
   return (
-    <div className="page">
-      <Grid comtainer justify="center" alignItems="center">
+   
+      <Grid container className="page">
         <Grid item xs={12}>
           <Grid
             container
@@ -129,7 +129,7 @@ export default function Skills() {
                   </Typography>
                 </Grid>
                 <Grid item xs={10}>
-                  <Typography variant="p" className={classes.p}>
+                  <Typography variant="body1" className={classes.p}>
                     Trained and practice both Front and Back End, I can take a
                     project from concept to deployment. Always eager to learn
                     new technologies, and never miss a chance to read up on all
@@ -149,7 +149,7 @@ export default function Skills() {
                 direction="row"
                 spacing={3}
                 justify="space-evenly"
-                alignItems="space-evenly"
+                alignItems="baseline"
                 className={classes.skillsContainer}
               >
                 <Grid item xs={12}>
@@ -604,6 +604,6 @@ export default function Skills() {
           </Grid>
         </Grid>
       </Grid>
-    </div>
+
   );
 }

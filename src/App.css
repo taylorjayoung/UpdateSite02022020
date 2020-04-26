@@ -51,6 +51,10 @@ a {
   color: #c803ffd7;
 }
 
+.MuiInputLabel-outlined {
+  color: #03ff8e !important;
+}
+
 .page {
   position: absolute;
   top: 100px;

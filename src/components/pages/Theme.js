@@ -1,7 +1,7 @@
 import { createMuiTheme } from "@material-ui/core/styles";
-import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
+// import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 
-const breakpoints = createBreakpoints({});
+// const breakpoints = createBreakpoints({});
 
 const navbarBlack = "rgb(19, 19, 19)";
 const myPurple = "#c803ffd7";

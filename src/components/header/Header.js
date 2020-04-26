@@ -58,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
       width: "100%",
       height: "70px",
       position: "fixed",
-      top: "-1px"
+      top: "-1px",
     },
   },
   toolbarMargin: {
@@ -139,11 +139,16 @@ export default function Header(props) {
   const [openDrawer, setOpenDrawer] = useState(false);
   const [value, setValue] = useState(0);
 
+  const random = () => {
+    return Math.floor(Math.random() * 10000 + 1);
+  };
+
   const listRoutes = () => (
     <Fragment>
       <List className={classes.drawerList} disablePadding>
         {routes.map((route) => (
           <ListItem
+            key={random()}
             className={"drawerItem"}
             button
             onClick={() => {
@@ -169,6 +174,7 @@ export default function Header(props) {
       <List className={classes.drawerList} disablePadding>
         {socialRoutes.map((route) => (
           <ListItem
+            key={random()}
             className={"drawerItem"}
             onClick={() => {
               setOpenDrawer(false);

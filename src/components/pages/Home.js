@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
@@ -42,7 +42,6 @@ export default function Home() {
                 <Grid item xs={5}>
                   <Link
                     to={`/contact`}
-                    activeClassName="active"
                     style={{ textDecoration: "none" }}
                   >
                     <Button variant="outlined" className={classes.buttons}>

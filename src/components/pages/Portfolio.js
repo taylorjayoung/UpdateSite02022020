@@ -1,5 +1,5 @@
-import React, { Component, Fragment } from "react";
-import { Link } from "react-router-dom";
+import React, { Component } from "react";
+// import { Link } from "react-router-dom";
 import GTLogo from "../assets/media/goldteethusalogo.png";
 import Melius2 from "../assets/media/Melius_Logo2.png";
 import Melius1 from "../assets/media/Melius1.png";
@@ -23,7 +23,7 @@ class Portfolio extends Component {
     </h1>
     <div class="flContainer">
       <div>
-        <img src=${MySiteLogo} class="mainContentLogos" />
+        <img src=${MySiteLogo} class="mainContentLogos" alt="logo" />
       </div>
       <div className="workLinksDiv">
       <a href="https://github.com/SlickJacket/UpdateSite02022020" class="workLinks">Github</a>
@@ -48,7 +48,7 @@ class Portfolio extends Component {
     </h1>
     <div class="flContainer">
       <div>
-        <img src=${GTLogo} class="mainContentLogos" />
+        <img src=${GTLogo} class="mainContentLogos" alt="logo" />
       </div>
       <div className="workLinksDiv">
       <a href="http://www.goldteethusa.com/index.php" class="workLinks">ORIGINAL SITE</a>
@@ -75,7 +75,7 @@ class Portfolio extends Component {
     </h1>
     <div class="flContainer">
       <div>
-        <img src=${Melius2} class="mainContentLogos" />
+        <img src=${Melius2} class="mainContentLogos" alt="logo" />
       </div>
       <div className="workLinksDiv">
       <a href="https://github.com/SlickJacket/myMelius" class="workLinks">Github (API)</a>
@@ -105,7 +105,7 @@ class Portfolio extends Component {
     </h1>
     <div class="flContainer">
       <div>
-        <img src=${Melius1} class="mainContentLogos" />
+        <img src=${Melius1} class="mainContentLogos" alt="logo" />
       </div>
       <div className="workLinksDiv">
         <a href="https://github.com/dwang0816/melius" class="workLinks">Github</a>
@@ -151,7 +151,7 @@ class Portfolio extends Component {
               <h1 className="workPageTitle">Experience</h1>
               <div className="flContainer">
                 <div>
-                  <img src={FLLogo} className="FLLogo" />
+                  <img src={FLLogo} className="FLLogo" alt="logo" />
                 </div>
                 <div>
                   <h4 style={{fontSize: "15px"}}>Brooklyn, NY</h4>
@@ -170,8 +170,8 @@ class Portfolio extends Component {
             </div>
             <div className="projectsContainer">
               <div className="gifss">
-                <img src={MySiteLogo} id="MySite" onClick={this.handleClick} />
-                <img src={MySiteGif} id="gif" />
+                <img src={MySiteLogo} id="MySite" onClick={this.handleClick} alt="logo" />
+                <img src={MySiteGif} id="gif" alt="gif" />
               </div>
               <div className="gifss">
                 <img
@@ -179,16 +179,17 @@ class Portfolio extends Component {
                   className="logos"
                   id="GTUSA"
                   onClick={this.handleClick}
+                  alt="logo"
                 />
-                <img src={GTGif} id="gif" />
+                <img src={GTGif} id="gif" alt="gif" />
               </div>
               <div className="gifss">
-                <img src={Melius2} id="Melius2" onClick={this.handleClick} />
-                <img src={Melius2Gif} id="gif" />
+                <img src={Melius2} id="Melius2" onClick={this.handleClick} alt="logo" />
+                <img src={Melius2Gif} id="gif" alt="gif" />
               </div>
               <div className="gifss">
-                <img src={Melius1} id="Melius1" onClick={this.handleClick} />
-                <img src={Melius1Gif} id="gif" />
+                <img src={Melius1} id="Melius1" onClick={this.handleClick} alt="logo" />
+                <img src={Melius1Gif} id="gif" alt="gif" />
               </div>
             </div>
           </div>
