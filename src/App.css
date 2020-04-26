@@ -67,7 +67,7 @@ a {
 .fade-appear-active,
 .fade-enter.fade-enter-active {
   opacity: 1;
-  transition: opacity 500ms linear 150ms;
+  transition: opacity 400ms linear 200ms;
 }
 
 .fade-exit {
@@ -76,7 +76,7 @@ a {
 
 .fade-exit.fade-exit-active {
   opacity: 0;
-  transition: opacity 250ms linear;
+  transition: opacity 200ms linear;
 }
 
 @media all and (max-width: 960px) {
@@ -119,11 +119,6 @@ a {
 
 #navBar > * {
   flex: 1, 1, 33.33%;
-}
-
-.homeWrapper {
-  min-height: 100vh;
-  display: flex;
 }
 
 .homeDiv {

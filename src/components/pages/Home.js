@@ -4,6 +4,7 @@ import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/styles";
 
+
 const useStyles = makeStyles((theme) => ({
   buttons: {
     color: "#c803ff",
@@ -22,7 +23,7 @@ export default function Home() {
 
   return (
     <div className="page">
-      <Grid container justify="center" alignItems="center" >
+      <Grid container justify="center" alignItems="center">
         <Grid item xs={11}>
           <Grid
             container

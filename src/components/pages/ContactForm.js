@@ -55,7 +55,7 @@ class ContactForm extends Component {
 
   render() {
     return (
-      <Fragment>
+      <div className="page">
         <div class="homeWrapper">
           
           <div id="contactme">
@@ -119,7 +119,7 @@ class ContactForm extends Component {
             </form>
           </div>
         </div>
-      </Fragment>
+        </div>
     );
   }
 }

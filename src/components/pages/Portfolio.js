@@ -143,7 +143,7 @@ class Portfolio extends Component {
 
   render() {
     return (
-      <Fragment>
+        <div className="page">
         <div class="homeWrapper">
           
           <div className="workContent">
@@ -193,7 +193,7 @@ class Portfolio extends Component {
             </div>
           </div>
         </div>
-      </Fragment>
+      </div>
     );
   }
 }
