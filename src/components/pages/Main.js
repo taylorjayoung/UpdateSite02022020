@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import "../../App.css";
 import Contact from "./ContactForm";
 import Home from "./Home";
-import Portfolio from "./Portfolio";
+import Portfolio from "./portfolio/Portfolio";
 import Skills from "./Skills";
 import { makeStyles } from "@material-ui/styles";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
