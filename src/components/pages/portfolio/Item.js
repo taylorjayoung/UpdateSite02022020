@@ -5,6 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import { makeStyles, ThemeProvider } from "@material-ui/styles";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
+import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -18,24 +19,39 @@ const useStyles = makeStyles((theme) => ({
   logo: {
     width: "100%",
   },
+  buttonsContainer: {
+    marginTop: "10px",
+  },
   title: {
-    color: theme.palette.secondary.main,
+    color: theme.palette.common.purple,
+    fontFamily: "Bowlby One SC",
   },
   divider: {
     backgroundColor: "white",
-    margin: "10px"
+    margin: "10px",
   },
   description: {
     color: "white",
+    fontFamily: "Roboto Condensed",
+    fontSize: "18px",
   },
+  circle: {
+    fontSize: "16px",
+  },
+  gif: {
+      width: "100%",
+      [theme.breakpoints.down("md")]: {
+          marginTop: "20px"
+      }
+  }
 }));
 
 export default function Item(props) {
   const classes = useStyles();
   return (
     <Paper className={classes.paper}>
-      <Grid container justify="space-between">
-        <Grid item xs={6}>
+      <Grid container justify="space-evenly" wrap="wrap">
+        <Grid item xs={12} lg={6}>
           <Grid container justify="space-between">
             <Grid item xs={3}>
               <Paper elevation={3} className={classes.logoPaper}>
@@ -45,9 +61,26 @@ export default function Item(props) {
                   alt="logo"
                 />
               </Paper>
-              <Button className="CheckButton" style={{ color: "white" }}>
-                Check it out!
-              </Button>
+              <Grid
+                container
+                direction="column"
+                alignItems="space-around"
+                spacing={2}
+                className={classes.buttonsContainer}
+              >
+                {props.item.github.map((git) => (
+                  <Grid item xs={12}>
+                    <Button
+                      variant="contained"
+                      color="secondary"
+                      href={git.link}
+                    >
+                      {git.name}
+                    </Button>
+                  </Grid>
+                ))}
+                }
+              </Grid>
             </Grid>
             <Grid item xs={8}>
               <Grid container direction="column">
@@ -57,12 +90,16 @@ export default function Item(props) {
                   </Typography>
                 </Grid>
                 <Grid item xs={12}>
-                    <Divider className={classes.divider}/>
+                  <Divider className={classes.divider} />
                 </Grid>
                 <Grid item xs={12}>
                   {props.item.description.map((des) => (
                     <Typography className={classes.description}>
-                      -{des}
+                      <FiberManualRecordIcon
+                        color="secondary"
+                        className={classes.circle}
+                      />{" "}
+                      {des}
                     </Typography>
                   ))}
                 </Grid>
@@ -70,9 +107,15 @@ export default function Item(props) {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item xs={5}>
-          {/* <h2 style={{color: "white"}}>{props.item.name}</h2> */}
-          <img src={props.item.gif} alt="gif" />
+        <Grid item xs={12} lg={5}>
+          <img src={props.item.gif} className={classes.gif} alt="gif" />
+          <Divider className={classes.divider} />
+          <iframe
+            frameBorder="0"
+            width="400"
+            height="200"
+            src={props.item.demo}
+          ></iframe>
         </Grid>
       </Grid>
     </Paper>

@@ -28,8 +28,13 @@ export default function Portfolio() {
     {
       logo: MySiteLogo,
       gif: MySiteGif,
-      github: ["https://github.com/SlickJacket/UpdateSite02022020"],
-      demo: "https://youtu.be/RwweLZNLDOk",
+      github: [
+        {
+          name: "React",
+          link: "https://github.com/SlickJacket/UpdateSite02022020",
+        },
+      ],
+      demo: "https://www.youtube.com/embed/RwweLZNLDOk",
       title: "My personal website",
       description: [
         "Utilized EmailJS to handle all emails.",
@@ -42,7 +47,7 @@ export default function Portfolio() {
       logo: GTLogo,
       gif: GTGif,
       github: [],
-      demo: "https://www.goldteethusa.com/",
+      demo: "https://www.youtube.com/embed/9Zgq5GOBogE",
       title: "Full Website Redesign using Shopify",
       description: [
         "Built off Vantage template using HTML, CSS, Javascript, and Liquid.",
@@ -55,10 +60,16 @@ export default function Portfolio() {
       logo: Melius2,
       gif: Melius2Gif,
       github: [
-        "https://github.com/SlickJacket/myMelius",
-        "https://github.com/SlickJacket/MyMeliusFrontEnd",
+        {
+          name: "React",
+          link: "https://github.com/SlickJacket/MyMeliusFrontEnd",
+        },
+        {
+          name: "Rails",
+          link: "https://github.com/SlickJacket/myMelius",
+        },
       ],
-      demo: "https://youtu.be/WJUS8hHy9BY",
+      demo: "https://www.youtube.com/embed/WJUS8hHy9BY",
       title: "Second iteration of HR Tool / Social Workplace App",
       description: [
         "Built out Rails API and incorporated a strong authorization.",
@@ -73,8 +84,13 @@ export default function Portfolio() {
     {
       logo: GoalsLogo,
       gif: WeeklyGif,
-      github: ["https://github.com/SlickJacket/Weekly_goals"],
-      demo: "https://www.youtube.com/watch?v=y7Na4NY4l9E&feature=youtu.be",
+      github: [
+        {
+          name: "Js and Rails",
+          link: "https://github.com/SlickJacket/Weekly_goals",
+        },
+      ],
+      demo: "https://www.youtube.com/embed/y7Na4NY4l9E",
       title: "Weekly Goals App",
       description: [
         "Built Rails Api to persist user’s goals and Stored data using PostgreSQL.",
@@ -85,8 +101,13 @@ export default function Portfolio() {
     {
       logo: Melius1,
       gif: Melius1Gif,
-      github: ["https://github.com/dwang0816/melius"],
-      demo: "https://youtu.be/VRxiqjngGfo",
+      github: [
+        {
+          name: "Rails",
+          link: "https://github.com/dwang0816/melius",
+        },
+      ],
+      demo: "https://www.youtube.com/embed/VRxiqjngGfo",
       title: "Rails HR Tool/ Social Workplace App",
       description: [
         "Utilized Rails to implement both the models/controllers and views, strictly sticking with the MVC model.",
@@ -110,7 +131,7 @@ export default function Portfolio() {
   return (
     <div className="page">
       <Grid container justify="center" alignItems="center">
-        <Grid item xs={10}>
+        <Grid item xs={11} md={10}>
           {renderCarousel()}
         </Grid>
       </Grid>
