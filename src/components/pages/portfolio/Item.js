@@ -9,7 +9,7 @@ import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
-    backgroundColor: theme.palette.primary.main,
+    backgroundColor: "theme.palette.primary.main",
     padding: "20px",
   },
   logoPaper: {
@@ -39,17 +39,21 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "16px",
   },
   gif: {
+    width: "100%",
+    [theme.breakpoints.down("md")]: {
+      marginTop: "20px",
+    },
+  },
+  iframe: {
       width: "100%",
-      [theme.breakpoints.down("md")]: {
-          marginTop: "20px"
-      }
+      height: "250px"
   }
 }));
 
 export default function Item(props) {
   const classes = useStyles();
   return (
-    <Paper className={classes.paper}>
+    // <Paper className={classes.paper}>
       <Grid container justify="space-evenly" wrap="wrap">
         <Grid item xs={12} lg={6}>
           <Grid container justify="space-between">
@@ -79,7 +83,7 @@ export default function Item(props) {
                     </Button>
                   </Grid>
                 ))}
-                }
+                
               </Grid>
             </Grid>
             <Grid item xs={8}>
@@ -108,16 +112,17 @@ export default function Item(props) {
           </Grid>
         </Grid>
         <Grid item xs={12} lg={5}>
-          <img src={props.item.gif} className={classes.gif} alt="gif" />
-          <Divider className={classes.divider} />
-          <iframe
-            frameBorder="0"
-            width="400"
-            height="200"
-            src={props.item.demo}
-          ></iframe>
+          <Grid container>
+            <Grid item xs={12}>
+              <img src={props.item.gif} className={classes.gif} alt="gif" />
+            </Grid>
+            <Divider className={classes.divider} />
+            <Grid item xs={12}>
+              <iframe className={classes.iframe} frameBorder="0" src={props.item.demo}></iframe>
+            </Grid>
+          </Grid>
         </Grid>
       </Grid>
-    </Paper>
+    // </Paper>
   );
 }

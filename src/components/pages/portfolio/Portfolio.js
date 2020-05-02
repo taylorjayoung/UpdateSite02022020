@@ -46,7 +46,12 @@ export default function Portfolio() {
     {
       logo: GTLogo,
       gif: GTGif,
-      github: [],
+      github: [
+        {
+          name: "Visit",
+          link: "https://www.goldteethusa.com",
+        },
+      ],
       demo: "https://www.youtube.com/embed/9Zgq5GOBogE",
       title: "Full Website Redesign using Shopify",
       description: [
@@ -120,7 +125,7 @@ export default function Portfolio() {
 
   const renderCarousel = () => {
     return (
-      <Carousel interval={4000}>
+      <Carousel autoPlay={false} indicators={false} animation="fade">
         {items.map((item) => (
           <Item item={item} className={classes.carContainer} />
         ))}
