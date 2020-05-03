@@ -8,6 +8,7 @@ import Skills from "./Skills";
 import { makeStyles } from "@material-ui/styles";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import "../../App.css";
+import Grid from "@material-ui/core/Grid";
 
 import AboutMe from "./AboutMe";
 
@@ -27,44 +28,42 @@ const useStyles = makeStyles((theme) => ({
 export default function Main() {
   const classes = useStyles();
   return (
-    
+    <Grid container className={classes.mainContainer}>
     <Route
       render={({ location }) => (
-        <TransitionGroup className={classes.mainContainer}>
+        <TransitionGroup>
           <CSSTransition key={location.key} timeout={450} classNames="fade">
             <Switch location={location}>
-              
-                <Route
-                  exact
-                  path={"/"}
-                  render={(routerProps) => <Home {...routerProps} />}
-                />
-                <Route
-                  exact
-                  path={"/about"}
-                  render={(routerProps) => <AboutMe {...routerProps} />}
-                />
-                <Route
-                  exact
-                  path={"/skills"}
-                  render={(routerProps) => <Skills {...routerProps} />}
-                />
-                <Route
-                  exact
-                  path={"/portfolio"}
-                  render={(routerProps) => <Portfolio {...routerProps} />}
-                />
-                <Route
-                  exact
-                  path={"/contact"}
-                  render={(routerProps) => <Contact {...routerProps} />}
-                />
-              
+              <Route
+                exact
+                path={"/"}
+                render={(routerProps) => <Home {...routerProps} />}
+              />
+              <Route
+                exact
+                path={"/about"}
+                render={(routerProps) => <AboutMe {...routerProps} />}
+              />
+              <Route
+                exact
+                path={"/skills"}
+                render={(routerProps) => <Skills {...routerProps} />}
+              />
+              <Route
+                exact
+                path={"/portfolio"}
+                render={(routerProps) => <Portfolio {...routerProps} />}
+              />
+              <Route
+                exact
+                path={"/contact"}
+                render={(routerProps) => <Contact {...routerProps} />}
+              />
             </Switch>
           </CSSTransition>
         </TransitionGroup>
-       
       )}
     />
+    </Grid>
   );
 }

@@ -91,7 +91,8 @@ const useStyles = makeStyles((theme) => ({
   drawer: {
     backgroundColor: theme.palette.primary.main,
     width: "5rem",
-    overflow: "hidden",
+    overflow: "scroll",
+    overflowX: "hidden"
   },
   drawerList: {
     marginTop: "2rem",
@@ -210,7 +211,7 @@ export default function Header(props) {
     { link: "/", value: 0, icon: <HomeIcon className={"icons"} /> },
     { link: "/about", value: 1, icon: <FaceIcon className={"icons"} /> },
     {
-      link: "skills",
+      link: "/skills",
       value: 2,
       icon: <AssessmentIcon className={"icons"} />,
     },
@@ -268,6 +269,7 @@ export default function Header(props) {
         onClose={() => setOpenDrawer(false)}
         onOpen={() => setOpenDrawer(true)}
         classes={{ paper: classes.drawer }}
+        className="swipeDrawer"
       >
         <Button
           component={Link}

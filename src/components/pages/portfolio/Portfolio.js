@@ -3,15 +3,14 @@ import GTLogo from "../../assets/media/goldteethusalogo.png";
 import Melius2 from "../../assets/media/Melius_Logo2.png";
 import GoalsLogo from "../../assets/media/weeklyGoals.png";
 import Melius1 from "../../assets/media/Melius1.png";
-import FLLogo from "../../assets/media/FLLogo.png";
 import MySiteLogo from "../../assets/media/MySiteLogo.png";
 import Melius1Gif from "../../assets/media/Melius1gf.gif";
 import Melius2Gif from "../../assets/media/melius2gf.gif";
 import GTGif from "../../assets/media/gtusagf.gif";
-import MySiteGif from "../../assets/media/MyNewSiteGF.gif";
+import MySiteGif from "../../assets/media/MyNewSite.gif";
 import WeeklyGif from "../../assets/media/weeklyBigBig.gif";
 import Carousel from "react-material-ui-carousel";
-import { Paper } from "@material-ui/core";
+
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/styles";
 import Item from "./Item";
@@ -34,7 +33,7 @@ export default function Portfolio() {
           link: "https://github.com/SlickJacket/UpdateSite02022020",
         },
       ],
-      demo: "https://www.youtube.com/embed/RwweLZNLDOk",
+      demo: "https://www.youtube.com/embed/nzvZYnerdck",
       title: "My personal website",
       description: [
         "Utilized EmailJS to handle all emails.",
@@ -142,15 +141,4 @@ export default function Portfolio() {
       </Grid>
     </div>
   );
-}
-
-{
-  /* <p className="workPagePs">
-              Graduate of The Flatiron School, October 2019, I have had to
-              opportunity to study under some of New York's best software
-              engineering instructors. My studies there have consisted of Git,
-              Ruby, Rails, Sinatra, Sqlite, PostgreSQL, Javascript, React,
-              Redux, as well as honed my already existing HTML and CSS
-              knowledge.
-            </p> */
 }

@@ -102,13 +102,12 @@ export default function Skills() {
   const classes = useStyles();
 
   return (
-   
-      <Grid container className="page">
+    <div className="page">
+      <Grid container>
         <Grid item xs={12}>
           <Grid
             container
             direction="column"
-            spacing={4}
             justify="space-evenly"
             alignItems="center"
           >
@@ -133,8 +132,8 @@ export default function Skills() {
                     Trained and practice both Front and Back End, I can take a
                     project from concept to deployment. Always eager to learn
                     new technologies, and never miss a chance to read up on all
-                    of the latest trends. Focusing on honing more Javascript at
-                    the moment due to it's powerful and versatile nature.
+                    of the latest trends. Recently I have been working with C#
+                    and .NET CORE, as I have seen how powerful it has become.
                   </Typography>
                 </Grid>
               </Grid>
@@ -604,6 +603,6 @@ export default function Skills() {
           </Grid>
         </Grid>
       </Grid>
-
+    </div>
   );
 }
