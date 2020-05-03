@@ -19,7 +19,12 @@
     "redux": "^4.0.5",
     "sass": "^1.25.1-test.1",
     "sass-loader": "^8.0.2",
-    "video-react": "^0.14.1"
+    "video-react": "^0.14.1",
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-log": "^3.0.1",
+    "webpack-manifest-plugin": "^2.2.0",
+    "webpack-sources": "^1.4.3"
   },
   "scripts": {
     "start": "react-scripts start",

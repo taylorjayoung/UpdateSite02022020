@@ -32,7 +32,7 @@ export default function Main() {
     <Route
       render={({ location }) => (
         <TransitionGroup>
-          <CSSTransition key={location.key} timeout={450} classNames="fade">
+          <CSSTransition key={location.pathname} timeout={450} classNames="fade">
             <Switch location={location}>
               <Route
                 exact
