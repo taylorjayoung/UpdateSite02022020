@@ -92,7 +92,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.primary.main,
     width: "5rem",
     overflow: "scroll",
-    overflowX: "hidden"
+    overflowX: "hidden",
   },
   drawerList: {
     marginTop: "2rem",
@@ -208,19 +208,27 @@ export default function Header(props) {
   ];
 
   const routes = [
-    { link: "/", value: 0, icon: <HomeIcon className={"icons"} /> },
-    { link: "/about", value: 1, icon: <FaceIcon className={"icons"} /> },
+    { name: "#/", link: "/", value: 0, icon: <HomeIcon className={"icons"} /> },
     {
+      name: "#/about",
+      link: "/about",
+      value: 1,
+      icon: <FaceIcon className={"icons"} />,
+    },
+    {
+      name: "#/skills",
       link: "/skills",
       value: 2,
       icon: <AssessmentIcon className={"icons"} />,
     },
     {
+      name: "#/portfolio",
       link: "/portfolio",
       value: 3,
       icon: <WorkIcon className={"icons"} />,
     },
     {
+      name: "#/contact",
       link: "/contact",
       value: 4,
       icon: <EmailIcon className={"icons"} />,
@@ -229,8 +237,8 @@ export default function Header(props) {
 
   useEffect(() => {
     routes.forEach((route) => {
-      switch (window.location.pathname) {
-        case `${route.link}`:
+      switch (window.location.hash) {
+        case `${route.name}`:
           if (value !== route.value) {
             setValue(route.value);
           }

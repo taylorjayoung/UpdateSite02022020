@@ -175,7 +175,7 @@ export default function ContactForm(props) {
                       className={classes.root}
                       variant="outlined"
                       color="secondary"
-                      errorText={"failed"}
+                      errortext={"failed"}
                       InputProps={{
                         classes: {
                           input: classes.input,
