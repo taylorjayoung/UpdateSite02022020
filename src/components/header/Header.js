@@ -194,15 +194,15 @@ export default function Header(props) {
 
   const socialRoutes = [
     {
-      link: "https://github.com/SlickJacket",
+      link: "https://github.com/taylorjayoung",
       icon: <GitHubIcon className={"icons"} />,
     },
     {
-      link: "https://www.instagram.com/bobbybuffaloboy/?hl=en",
+      link: "https://www.instagram.com/taylorj_young/?hl=en",
       icon: <InstagramIcon className={"icons"} />,
     },
     {
-      link: "https://www.linkedin.com/in/bobby-buffaloboy-4ba4ba79/",
+      link: "https://www.linkedin.com/in/taylor-j-young/",
       icon: <LinkedInIcon className={"icons"} />,
     },
   ];

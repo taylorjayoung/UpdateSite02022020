@@ -32,10 +32,10 @@ export default function Home() {
             alignItems="center"
           >
             <Grid item xs={10}>
-              <h1 id="myTitle">BOBBY BUFFALOBOY </h1>
+              <h1 id="myTitle">SFDX Prince</h1>
             </Grid>
             <Grid item xs={11}>
-              <h2 id="homeSubtitle">FULLSTACK DEVELOPER</h2>
+              <h2 id="homeSubtitle">Salesforce LWC Consulting</h2>
             </Grid>
             <Grid item xs={12}>
               <Grid container direction="column">
