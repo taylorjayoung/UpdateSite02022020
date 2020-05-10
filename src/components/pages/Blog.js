@@ -3,9 +3,8 @@ import profilePhoto from "../assets/media/profile.png";
 import { makeStyles } from "@material-ui/styles";
 import { useTheme } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import Typography from "@material-ui/core/Typography";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import Article from "./writingComponents/Article"
+import ArticleTile from "./writingComponents/ArticleTile"
 import "../../App.css";
 
 const useStyles = makeStyles((theme) => ({
@@ -49,29 +48,49 @@ export default function Blog(props) {
     {
       id: 1,
       header: {
-        title: "",
+        title: "Four left? How many left?",
         author: "Sylvan Tompkins",
         featuredQuote: "I am, above all, what excites me."
       },
-      body: {
-        paragraphs: [
-          'What makes this quote so powerful, is the force of connection I have to it. If I find something interesting, I will immediately form an obsession, then, that obsession grows exponentially. Whether that be learning how to brew my own moonshine, to performing in a metal band, designing and hand carving rings, learning the entire adobe suite, to becoming a Fullstack developer.'
-        ]
-      },
+      description: [
+        'What makes this quote so powerful, is the force of connection I have to it. If I find something interesting, I will immediately form an obsession, then, that obsession grows exponentially. Whether that be learning how to brew my own.'
+      ],
       categories: []
     },
     {
       id: 2,
       header: {
-        title: "",
+        title: "Gradient resurfcacing",
         author: "Sylvan Tompkins",
         featuredQuote: "I am, above all, what excites me."
       },
-      body: {
-        paragraphs: [
-          'What makes this quote so powerful, is the force of connection I have to it. If I find something interesting, I will immediately form an obsession, then, that obsession grows exponentially. Whether that be learning how to brew my own moonshine, to performing in a metal band, designing and hand carving rings, learning the entire adobe suite, to becoming a Fullstack developer.'
-        ]
+      description: [
+        'What makes this quote so powerful, is the force of connection I have to it. If I find something interesting, I will immediately form an obsession, then, that obsession grows exponentially. Whether that be learning how to brew my own.'
+      ],
+      categories: []
+    },
+    {
+      id: 1,
+      header: {
+        title: "Four left? How many left?",
+        author: "Sylvan Tompkins",
+        featuredQuote: "I am, above all, what excites me."
       },
+      description: [
+        'What makes this quote so powerful, is the force of connection I have to it. If I find something interesting, I will immediately form an obsession, then, that obsession grows exponentially. Whether that be learning how to brew my own.'
+      ],
+      categories: []
+    },
+    {
+      id: 2,
+      header: {
+        title: "Gradient resurfcacing",
+        author: "Sylvan Tompkins",
+        featuredQuote: "I am, above all, what excites me."
+      },
+      description: [
+        'What makes this quote so powerful, is the force of connection I have to it. If I find something interesting, I will immediately form an obsession, then, that obsession grows exponentially. Whether that be learning how to brew my own.'
+      ],
       categories: []
     }
   ]
@@ -80,7 +99,7 @@ export default function Blog(props) {
     return articles.map( article => {
       return (
         <Grid item xs={12} sm={6} lg={4}>
-          <Article article={article}/>
+          <ArticleTile article={article}/>
         </Grid>
       )
     })
