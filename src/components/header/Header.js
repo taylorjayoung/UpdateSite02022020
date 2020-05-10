@@ -12,7 +12,7 @@ import Divider from "@material-ui/core/Divider";
 import MenuIcon from "@material-ui/icons/Menu";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-import FaceIcon from "@material-ui/icons/Face";
+import MenuBookIcon from '@material-ui/icons/MenuBook';
 import AssessmentIcon from "@material-ui/icons/Assessment";
 import ListItemText from "@material-ui/core/ListItemText";
 import IconButton from "@material-ui/core/IconButton";
@@ -210,16 +210,16 @@ export default function Header(props) {
   const routes = [
     { name: "#/", link: "/", value: 0, icon: <HomeIcon className={"icons"} /> },
     {
-      name: "#/about",
-      link: "/about",
-      value: 1,
-      icon: <FaceIcon className={"icons"} />,
-    },
-    {
       name: "#/skills",
       link: "/skills",
-      value: 2,
+      value: 1,
       icon: <AssessmentIcon className={"icons"} />,
+  },
+    {
+      name: "#/blog",
+      link: "/blog",
+      value: 2,
+      icon: <MenuBookIcon className={"icons"} />,
     },
     {
       name: "#/portfolio",

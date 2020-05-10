@@ -50,16 +50,14 @@ export default function Home() {
                   </Link>
                 </Grid>
                 <Grid item xs={5}>
-                  <a
-                    href={
-                      "https://drive.google.com/file/d/19B5DBWxY8vsvAUqLI__YpRZ6_4WAlx3y/view?usp=sharing"
-                    }
+                  <Link
+                    to={`/contact`}
                     style={{ textDecoration: "none" }}
                   >
                     <Button variant="outlined" className={classes.buttons}>
-                      Resume
+                      Projects
                     </Button>
-                  </a>
+                  </Link>
                 </Grid>
               </Grid>
             </Grid>

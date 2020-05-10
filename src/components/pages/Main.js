@@ -4,6 +4,7 @@ import "../../App.css";
 import Contact from "./ContactForm";
 import Home from "./Home";
 import Portfolio from "./portfolio/Portfolio";
+import Blog from "./Blog";
 import Skills from "./Skills";
 import { makeStyles } from "@material-ui/styles";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
@@ -41,11 +42,6 @@ export default function Main() {
               />
               <Route
                 exact
-                path={"/about"}
-                render={(routerProps) => <AboutMe {...routerProps} />}
-              />
-              <Route
-                exact
                 path={"/skills"}
                 render={(routerProps) => <Skills {...routerProps} />}
               />
@@ -58,6 +54,16 @@ export default function Main() {
                 exact
                 path={"/contact"}
                 render={(routerProps) => <Contact {...routerProps} />}
+              />
+              <Route
+                exact
+                path={"/about"}
+                render={(routerProps) => <AboutMe {...routerProps} />}
+              />
+              <Route
+                exact
+                path={"/blog"}
+                render={(routerProps) => <Blog {...routerProps} />}
               />
             </Switch>
           </CSSTransition>
