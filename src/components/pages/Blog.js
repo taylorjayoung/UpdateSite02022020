@@ -1,15 +1,13 @@
-import React, { useState, useEffect,Fragment } from "react";
-import profilePhoto from "../assets/media/profile.png";
+import React from "react";
 import { makeStyles } from "@material-ui/styles";
-import { useTheme } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
 import ArticleTile from "./writingComponents/ArticleTile"
 import "../../App.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1
+    flexGrow: 1,
+    padding: "15px"
   },
   paper: {
     padding: theme.spacing(2),
@@ -24,26 +22,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Blog(props) {
   const classes = useStyles();
-  const theme = useTheme();
-  const [containerDirection, setContainerDirection] = useState("row");
-  const [containerWrap, setContainerWrap] = useState("wrap");
-  const [containerJustify, setContainerJustify] = useState("space-evenly");
-  const [quoteSize, setQuoteSize] = useState("h3");
-  const matches = useMediaQuery(theme.breakpoints.down("md"));
 
-  useEffect(() => {
-    if (matches) {
-      setContainerDirection("column-reverse");
-      setContainerWrap("wrap");
-      setContainerJustify("center");
-      setQuoteSize("h4");
-    } else {
-      setContainerDirection("row");
-      setContainerWrap("wrap");
-      setContainerJustify("space-evenly");
-      setQuoteSize("h3");
-    }
-  });
+
   const articles = [
     {
       id: 1,
